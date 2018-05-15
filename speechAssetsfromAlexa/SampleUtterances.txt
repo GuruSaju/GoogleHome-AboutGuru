@@ -1,0 +1,157 @@
+AMAZON.HelpIntent please help
+AMAZON.HelpIntent help please
+AMAZON.HelpIntent help me
+AMAZON.HelpIntent help
+AMAZON.HelpIntent to help me
+AMAZON.HelpIntent for help
+WorkIntent What does he do for a living
+WorkIntent job
+WorkIntent workplace
+WorkIntent Where does he work
+WorkIntent What's his current job
+WorkIntent What does Guru do
+WorkIntent What does he do
+RealNameIntent What is his full name
+RealNameIntent his birth name
+RealNameIntent his full name
+RealNameIntent his real name
+RealNameIntent What is his real name
+SummaryIntent introduction
+SummaryIntent summary
+SummaryIntent about himself
+RelationshipIntent is he going out with anyone
+RelationshipIntent is he dating anyone
+RelationshipIntent Who is he dating
+RelationshipIntent is he married
+RelationshipIntent married
+RelationshipIntent girlfriend
+RelationshipIntent does he have a girlfriend
+RelationshipIntent is he in a relationship
+RelationshipIntent is he single
+RelationshipIntent Relationship status
+NationalityIntent nationality
+NationalityIntent Which city is he from
+NationalityIntent Where was he born
+NationalityIntent Where is he from
+ContactIntent resume
+ContactIntent phone number
+ContactIntent contact
+ContactIntent email address
+ContactIntent How can I contact him
+DegreeIntent in which school did he study
+DegreeIntent which college did he study
+DegreeIntent what colle did he go to
+DegreeIntent which college did he go to
+DegreeIntent which school did he go to
+DegreeIntent what school did he go to
+DegreeIntent where did he go to college
+DegreeIntent where did he go to school
+DegreeIntent education
+DegreeIntent school
+DegreeIntent College
+DegreeIntent level of qualification
+DegreeIntent level of education
+DegreeIntent What did he study
+FavoriteIntent What kind of {favAbout} does he like
+FavoriteIntent What's guru's favorite {favAbout}
+FavoriteIntent Which is guru's favorite {favAbout}
+FavoriteIntent Who does guru {favAbout}
+FavoriteIntent what does he likes to {favAbout} the most
+FavoriteIntent What kind of {favAbout} does he likes
+FavoriteIntent Who is his favorite {favAbout}
+FavoriteIntent which {favAbout} he likes
+FavoriteIntent his most liked {favAbout}
+FavoriteIntent which {favAbout} does he like the most
+FavoriteIntent which {favAbout} does he like
+FavoriteIntent his dream {favAbout}
+FavoriteIntent his favorite {favAbout}
+FavoriteIntent {favAbout}
+FavoriteIntent What {favAbout} he likes
+FavoriteIntent What {favAbout} does he like
+FavoriteIntent What is his favorite {favAbout}
+DontKnowIntent I have no idea
+DontKnowIntent don't know
+DontKnowIntent no idea
+DontKnowIntent pass
+DontKnowIntent I don't know
+GuruTriviaIntent for the quiz about him
+GuruTriviaIntent for his game
+GuruTriviaIntent for quiz
+GuruTriviaIntent for his quiz
+GuruTriviaIntent to play guru game
+GuruTriviaIntent to play guru trivia
+GuruTriviaIntent to play guru quiz
+GuruTriviaIntent to play how well do you know about guru
+GuruTriviaIntent trivia game
+GuruTriviaIntent Play About guru Trivia
+LanguageIntent native language
+LanguageIntent mother's tongue
+LanguageIntent What is his mother's tongue
+LanguageIntent What languages does guru speak
+LanguageIntent What languages does he speak
+LanguageIntent What is guru's native language
+TechnicalSkillsIntent Which technologies does he know
+TechnicalSkillsIntent What programming languages does he know
+TechnicalSkillsIntent professional skills
+TechnicalSkillsIntent about his technical skills
+TechnicalSkillsIntent What are his technical skills
+TechnicalSkillsIntent technical skills
+WorkExperienceIntent professional experience
+WorkExperienceIntent Which companies did he work for 
+WorkExperienceIntent previous work 
+WorkExperienceIntent past employments
+WorkExperienceIntent his previous experiences 
+WorkExperienceIntent his work history
+WorkExperienceIntent about his work experiences
+WorkExperienceIntent What are his work experiences
+WorkExperienceIntent work experiences
+CertificationsIntent programming certifications
+CertificationsIntent Does he have any certifications
+CertificationsIntent technical cerfications
+CertificationsIntent about his certifications
+CertificationsIntent What are his professional certifications
+CertificationsIntent cerfications
+WorkDetailIntent What proejcts did he work on at {companyType}
+WorkDetailIntent about {companyType}
+WorkDetailIntent {companyType} projects
+WorkDetailIntent which projects he worked on at {companyType}
+WorkDetailIntent what did he do at {companyType}
+WorkDetailIntent {companyType}
+WorkDetailIntent about his experience at {companyType}
+PublicationsIntent about his publications
+PublicationsIntent has he published any papers
+PublicationsIntent his research publications
+PublicationsIntent has he published any research papers
+PublicationsIntent what are his publications
+PublicationsIntent publications
+PublicationsIntent publication
+OtherProjectsIntent personal projects
+OtherProjectsIntent projects he worked on during his free time
+OtherProjectsIntent own projects
+OtherProjectsIntent What projects has he worked on his own
+OtherProjectsIntent side projects
+OtherProjectsIntent other projects
+PassionIntent What is he most passionate about
+PassionIntent things he is passionate about
+PassionIntent What is his passion
+PassionIntent What does he beleive in
+PassionIntent What does he want to do in the future
+PassionIntent future goals
+PassionIntent about his passion
+PassionIntent what is he passionate about
+HobbiesIntent about his hobbies
+HobbiesIntent What does he do in his free time
+HobbiesIntent hobbies
+HobbiesIntent interests
+HobbiesIntent What technologies is he interested in
+HobbiesIntent What fields is he interested in
+HobbiesIntent about his interests
+HobbiesIntent What are his interests
+HobbiesIntent What is he interested in
+HobbiesIntent What are his hobbies
+ProjectsIntent share his projects
+ProjectsIntent What are the projects he worked on
+ProjectsIntent about his projects
+ProjectsIntent What are his projects
+ProjectsIntent projects
+ProjectsIntent What projects did he work on

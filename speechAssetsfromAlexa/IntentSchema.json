@@ -1,0 +1,382 @@
+{
+   "intents": [
+                {
+                    "intent": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.HelpIntent",
+                    "samples": [
+                        "please help",
+                        "help please",
+                        "help me",
+                        "help",
+                        "to help me",
+                        "for help"
+                    ]
+                },
+                {
+                    "intent": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "WorkIntent",
+                    "slots": [],
+                    "samples": [
+                        "What does he do for a living",
+                        "job",
+                        "workplace",
+                        "Where does he work",
+                        "What's his current job",
+                        "What does Guru do",
+                        "What does he do"
+                    ]
+                },
+                {
+                    "intent": "RealintentIntent",
+                    "slots": [],
+                    "samples": [
+                        "What is his full intent",
+                        "his birth intent",
+                        "his full intent",
+                        "his real intent",
+                        "What is his real intent"
+                    ]
+                },
+                {
+                    "intent": "SummaryIntent",
+                    "slots": [],
+                    "samples": [
+                        "introduction",
+                        "summary",
+                        "about himself"
+                    ]
+                },
+                {
+                    "intent": "ActorIntent",
+                    "slots": [],
+                    "samples": [
+                        "favourite actor",
+                        "his favourite actor",
+                        "Who is his favourite actor"
+                    ]
+                },
+                {
+                    "intent": "RelationshipIntent",
+                    "slots": [],
+                    "samples": [
+                        "is he going out with anyone",
+                        "is he dating anyone",
+                        "Who is he dating",
+                        "is he married",
+                        "married",
+                        "girlfriend",
+                        "does he have a girlfriend",
+                        "is he in a relationship",
+                        "is he single",
+                        "Relationship status"
+                    ]
+                },
+                {
+                    "intent": "NationalityIntent",
+                    "slots": [],
+                    "samples": [
+                        "nationality",
+                        "Which city is he from",
+                        "Where was he born",
+                        "Where is he from"
+                    ]
+                },
+                {
+                    "intent": "ContactIntent",
+                    "slots": [],
+                    "samples": [
+                        "resume",
+                        "phone number",
+                        "contact",
+                        "email address",
+                        "How can I contact him"
+                    ]
+                },
+                {
+                    "intent": "DegreeIntent",
+                    "slots": [],
+                    "samples": [
+                        "in which school did he study",
+                        "which college did he study",
+                        "what colle did he go to",
+                        "which college did he go to",
+                        "which school did he go to",
+                        "what school did he go to",
+                        "where did he go to college",
+                        "where did he go to school",
+                        "education",
+                        "school",
+                        "College",
+                        "level of qualification",
+                        "level of education",
+                        "What did he study"
+                    ]
+                },
+                {
+                    "intent": "FavoriteIntent",
+                    "slots": [
+                        {
+                            "intent": "favAbout",
+                            "type": "favThings"
+                        }
+                    ],
+                    "samples": [
+                        "What kind of {favAbout} does he like",
+                        "What's guru's favorite {favAbout}",
+                        "Which is guru's favorite {favAbout}",
+                        "Who does guru {favAbout}",
+                        "what does he likes to {favAbout} the most",
+                        "What kind of {favAbout} does he likes",
+                        "Who is his favorite {favAbout}",
+                        "which {favAbout} he likes",
+                        "his most liked {favAbout}",
+                        "which {favAbout} does he like the most",
+                        "which {favAbout} does he like",
+                        "his dream {favAbout}",
+                        "his favorite {favAbout}",
+                        "{favAbout}",
+                        "What {favAbout} he likes",
+                        "What {favAbout} does he like",
+                        "What is his favorite {favAbout}"
+                    ]
+                },
+                {
+                    "intent": "AnswerIntent",
+                    "slots": [
+                        {
+                            "intent": "Answer",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{Answer}",
+                        "the answer is {Answer}"
+                    ]
+                },
+                {
+                    "intent": "DontKnowIntent",
+                    "slots": [],
+                    "samples": [
+                        "I have no idea",
+                        "don't know",
+                        "no idea",
+                        "pass",
+                        "I don't know"
+                    ]
+                },
+                {
+                    "intent": "GuruTriviaIntent",
+                    "slots": [],
+                    "samples": [
+                        "for the quiz about him",
+                        "for his game",
+                        "for quiz",
+                        "for his quiz",
+                        "to play guru game",
+                        "to play guru trivia",
+                        "to play guru quiz",
+                        "to play how well do you know about guru",
+                        "trivia game",
+                        "Play About guru Trivia"
+                    ]
+                },
+                {
+                    "intent": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "LanguageIntent",
+                    "slots": [],
+                    "samples": [
+                        "native language",
+                        "mother's tongue",
+                        "What is his mother's tongue",
+                        "What languages does guru speak",
+                        "What languages does he speak",
+                        "What is guru's native language"
+                    ]
+                },
+                {
+                    "intent": "TechnicalSkillsIntent",
+                    "slots": [],
+                    "samples": [
+                        "Which technologies does he know",
+                        "What programming languages does he know",
+                        "professional skills",
+                        "about his technical skills",
+                        "What are his technical skills",
+                        "technical skills"
+                    ]
+                },
+                {
+                    "intent": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                },
+                {
+                    "intent": "WorkExperienceIntent",
+                    "slots": [],
+                    "samples": [
+                        "professional experience",
+                        "Which companies did he work for ",
+                        "previous work ",
+                        "past employments",
+                        "his previous experiences ",
+                        "his work history",
+                        "about his work experiences",
+                        "What are his work experiences",
+                        "work experiences"
+                    ]
+                },
+                {
+                    "intent": "CertificationsIntent",
+                    "slots": [],
+                    "samples": [
+                        "programming certifications",
+                        "Does he have any certifications",
+                        "technical cerfications",
+                        "about his certifications",
+                        "What are his professional certifications",
+                        "cerfications"
+                    ]
+                },
+                {
+                    "intent": "WorkDetailIntent",
+                    "slots": [
+                        {
+                            "intent": "companyType",
+                            "type": "companies"
+                        }
+                    ],
+                    "samples": [
+                        "What proejcts did he work on at {companyType}",
+                        "about {companyType}",
+                        "{companyType} projects",
+                        "which projects he worked on at {companyType}",
+                        "what did he do at {companyType}",
+                        "{companyType}",
+                        "about his experience at {companyType}"
+                    ]
+                },
+                {
+                    "intent": "PublicationsIntent",
+                    "slots": [],
+                    "samples": [
+                        "about his publications",
+                        "has he published any papers",
+                        "his research publications",
+                        "has he published any research papers",
+                        "what are his publications",
+                        "publications",
+                        "publication"
+                    ]
+                },
+                {
+                    "intent": "OtherProjectsIntent",
+                    "slots": [],
+                    "samples": [
+                        "personal projects",
+                        "projects he worked on during his free time",
+                        "own projects",
+                        "What projects has he worked on his own",
+                        "side projects",
+                        "other projects"
+                    ]
+                },
+                {
+                    "intent": "PassionIntent",
+                    "slots": [],
+                    "samples": [
+                        "What is he most passionate about",
+                        "things he is passionate about",
+                        "What is his passion",
+                        "What does he beleive in",
+                        "What does he want to do in the future",
+                        "future goals",
+                        "about his passion",
+                        "what is he passionate about"
+                    ]
+                },
+                {
+                    "intent": "HobbiesIntent",
+                    "slots": [],
+                    "samples": [
+                        "about his hobbies",
+                        "What does he do in his free time",
+                        "hobbies",
+                        "interests",
+                        "What technologies is he interested in",
+                        "What fields is he interested in",
+                        "about his interests",
+                        "What are his interests",
+                        "What is he interested in",
+                        "What are his hobbies"
+                    ]
+                },
+                {
+                    "intent": "ProjectsIntent",
+                    "slots": [],
+                    "samples": [
+                        "share his projects",
+                        "What are the projects he worked on",
+                        "about his projects",
+                        "What are his projects",
+                        "projects",
+                        "What projects did he work on"
+                    ]
+                }
+            ]
+}
