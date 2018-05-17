@@ -1,6 +1,6 @@
 # GoogleHome-AboutGuru
 A simple skill for googlehome/assistant about me  
-Using Dialog flow for intents and managinf conversation  
+Using Dialog flow for intents and managing conversation  
 Using Firebase for my API logic to handle information  
 
 ## Steps to install Firebase CLI  
