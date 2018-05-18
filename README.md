@@ -15,3 +15,9 @@ Using Firebase for my API logic to handle information
 3) Go to your firebase console. Click on functions. You can see your deployed functions. 
 4) Copy the url of the function and paste it to the webhook fullfillment section in dialogflow console  
 5) AND WOHOOOO! your assistant is connected with firebase function. This is the easy part.  
+  
+## Research Notes when comparing with alexa  
+1) When building a skill with google home the response is always diaplayed if the device has a screen and then any cards with it. 
+2) If you are speaking through google home speaker then there is no way to send a card because there is no device which not the case in Alexa because alexa sends a card to your mobile app irrespective of screen capability.  
+3) JSON.stringify(req.body.originalDetectIntentRequest.payload.surface.capabilities) by parsing this in the request we can find if actions.capability.SCREEN_OUTPUT is present. If it is present then we can say that it supports screen output. I will have to build response based on this.  
+4) V2 is the new version and V1 is the old version and basically what changed is request and response. Find the differences at https://dialogflow.com/docs/reference/v1-v2-migration-guide-fulfillment. Not sure on the module change. Will have to dig on it more.   
