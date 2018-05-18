@@ -70,8 +70,7 @@ const handlers = {
     },
     'LaunchGuruIntent': function () {
         const speechOutput = guru_launch;
-        const repromptSpeech = guru_launch_reprompt;
-        this.emit(':responseReady',speechOutput,repromptSpeech);
+        this.emit(':responseReady',speechOutput);
     }
 }
 
@@ -90,8 +89,7 @@ class Handler {
       console.log('event'+event);
     if (event.startsWith(':')) {
       this.res.json({
-        speech: data.speechOutput,
-        displayText: data
+        fulfillmentText: data
       });
       return;
     } else {
