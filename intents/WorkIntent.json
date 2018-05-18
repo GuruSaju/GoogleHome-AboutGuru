@@ -1,0 +1,23 @@
+{
+  "id": "5cf4baaa-ee08-4959-bce4-10560482f7f7",
+  "name": "WorkIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "WorkIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1526609415,
+  "fallbackIntent": false,
+  "events": []
+}

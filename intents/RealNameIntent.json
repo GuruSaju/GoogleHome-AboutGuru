@@ -1,0 +1,29 @@
+{
+  "id": "706fdde1-c962-4c04-b932-9170bbebd421",
+  "name": "RealNameIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "RealNameIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1526609566,
+  "fallbackIntent": false,
+  "events": []
+}

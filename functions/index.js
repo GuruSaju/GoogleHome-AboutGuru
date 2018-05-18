@@ -1,18 +1,18 @@
 // See https://github.com/dialogflow/dialogflow-fulfillment-nodejs
 // for Dialogflow fulfillment library docs, samples, and to report issues
 'use strict';
- 
+
 const functions = require('firebase-functions');
-const {WebhookClient} = require('dialogflow-fulfillment');
-const {Card, Suggestion} = require('dialogflow-fulfillment');
- 
+const { WebhookClient } = require('dialogflow-fulfillment');
+const { Card, Suggestion } = require('dialogflow-fulfillment');
+
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 const ANSWER_COUNT = 4; // The number of possible answers per trivia question.
 const GAME_LENGTH = 5;  // The number of questions per trivia game.
 const GAME_STATES = {
-    TRIVIA: "_TRIVIAMODE", // Asking trivia questions.
-    START: "_STARTMODE", // Entry point, start the game.
-    HELP: "_HELPMODE", // The user is asking for help.
+  TRIVIA: "_TRIVIAMODE", // Asking trivia questions.
+  START: "_STARTMODE", // Entry point, start the game.
+  HELP: "_HELPMODE", // The user is asking for help.
 };
 
 //=========================================================================================================================================
@@ -63,17 +63,17 @@ const guru_favTvSeries = "It is none other than Breaking Bad.";
 const guru_favVideoGame = "Horizon Zero Dawn blew him away. Aloy All the way.";
 const guru_workExpereince = "He has around 3 plus years’ experience in development, research and teaching. I have sent a brief list of his work history to your device. Please say the name of the company to know more, or, say contact to get the email address of guru.";
 const guru_publications = "He has authored two publications, first one titled, A Certificateless One-Way Group Key Agreement Protocol, for Point-to-Point Email Encryption, and ,another titled, IMPROVED SUPERVISED CLASSIFICATION OF ACCELEROMETRY DATA, " +
-    "TO DISTINGUISH BEHAVIORS OF SOARING BIRDS.";
+  "TO DISTINGUISH BEHAVIORS OF SOARING BIRDS.";
 const guru_certifications = "He has completed Java 8, Bash Shell Scripting and O O Concepts certifications by Brainbench.";
 const guru_nationwide = "As a member of a Test and Learn team and from a multi-speed IT perspective, his aim was to implement innovative systems of engagement, with agility and experimentation in order to optimize internet sales applications, and deliver"
-    + " timely solutions within a rapidly evolving online environment. He and his team built innovative Test and learn features for our sales applications, Auto Insurance, Property Insurance, and Powersports Insurance, which could"
-    + "be switched on and off when needed, and had a line of separation from mainline code. I have sent more details about his work at Nationwide to your device.";
+  + " timely solutions within a rapidly evolving online environment. He and his team built innovative Test and learn features for our sales applications, Auto Insurance, Property Insurance, and Powersports Insurance, which could"
+  + "be switched on and off when needed, and had a line of separation from mainline code. I have sent more details about his work at Nationwide to your device.";
 const guru_cic = "As a software engineer he worked on The Online Product Approval (OPA) application, which is a web-based workflow engine that manages the product development lifecycle, and dialog between the Product Development Associates and Licensee " +
-    "partners. Online Product Approval (OPA) is a system used to accept, manage, and approve licensed product submissions. He worked on adding a new workflow module, in addition to the normal workflow, to accommodate the BPM team." +
-    " I have sent more details about his work at Columbus International Corporation to your device";
+  "partners. Online Product Approval (OPA) is a system used to accept, manage, and approve licensed product submissions. He worked on adding a new workflow module, in addition to the normal workflow, to accommodate the BPM team." +
+  " I have sent more details about his work at Columbus International Corporation to your device";
 
 const guru_bsu = "As a Research Developer at the Computer Science department at Boise State university, he did research in cyber-security on point to point email encryption. He designed a protocol on point to point email encryption and developed software prototypes,"
-    + " as a teaching assistant he assisted in tutoring, teaching, mentoring and grading, as a hpc admin he helped other researchers in coding on a 16 node g p u clustered supercomputer. I have sent more details about his work at Boise State University to your device.";
+  + " as a teaching assistant he assisted in tutoring, teaching, mentoring and grading, as a hpc admin he helped other researchers in coding on a 16 node g p u clustered supercomputer. I have sent more details about his work at Boise State University to your device.";
 const guru_bytebe = "As a part time java web developer at ByteBe, he worked on developing various web applications for various industries like granite, clubs and e-commerce. I have sent more details about his work at ByteBe to your device.";
 const guru_abt = "As a Java Developer intern at ABT, he was working with the Java project team where he learned and developed web applications. I have sent more details about his work at ABT to your device.";
 const guru_projects = "Please say the name of the organization or company he worked for, to know more on his projects or say, side projects to know about his other projects. Say work experience to get a list of his work experiences. What would you like to know?";
@@ -86,20 +86,29 @@ const guru_likes = "You can ask him about things he likes. You can for example a
 //Handlers
 //=========================================================================================================================================
 
-const handlers = {
-    'LaunchRequest': function () {
-        this.emit('LaunchGuruIntent');
-    },
-    'LaunchGuruIntent': function () {
-        const speechOutput = guru_launch;
-        this.emit(':responseReady',speechOutput);
-    }
+const initialhandlers = {
+  'LaunchRequest': function () {
+    this.emit('LaunchGuruIntent');
+  },
+  'LaunchGuruIntent': function () {
+    const speechOutput = guru_launch;
+    this.emit(':responseReady', speechOutput);
+  },
+  'WorkIntent': function () {
+    const speechOutput = guru_work;
+    this.emit(':responseReady', speechOutput);
+  },
+  'RealNameIntent': function () {
+    const speechOutput = guru_fullName;
+    this.emit(':responseReady', speechOutput);
+  }
+
 }
 
 exports.aboutGuru = functions.https.onRequest((req, res) => {
-  const handler = new Handler(handlers);
+  const handler = new Handler(initialhandlers);
   handler.run(req, res);
-}); 
+});
 
 // Define new Handler class to reuse previously defined handlers
 class Handler {
@@ -107,8 +116,8 @@ class Handler {
     this.handlers = handlers;
   }
   emit(event, data) {
-      console.log('data'+data);
-      console.log('event'+event);
+    console.log('data' + data);
+    console.log('event' + event);
     if (event.startsWith(':')) {
       this.res.json({
         fulfillmentText: data
