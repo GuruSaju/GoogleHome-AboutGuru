@@ -21,3 +21,9 @@ Using Firebase for my API logic to handle information
 2) If you are speaking through google home speaker then there is no way to send a card because there is no device which not the case in Alexa because alexa sends a card to your mobile app irrespective of screen capability.  
 3) JSON.stringify(req.body.originalDetectIntentRequest.payload.surface.capabilities) by parsing this in the request we can find if actions.capability.SCREEN_OUTPUT is present. If it is present then we can say that it supports screen output. I will have to build response based on this.  
 4) V2 is the new version and V1 is the old version and basically what changed is request and response. Find the differences at https://dialogflow.com/docs/reference/v1-v2-migration-guide-fulfillment. Not sure on the module change. Will have to dig on it more.   
+
+## Re-using code written for alexa  
+1) Having a fallback function to handle all intents.  
+2) Define a handler class to have an emit function which handles alexa's emit from handlers.  
+3) pass in the actions module as a dialog flow(conv) to use and build the response and return it.  
+4) Voila!!! much reuse and happy coding :) :) :)  

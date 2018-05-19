@@ -2,10 +2,12 @@
 // for Dialogflow fulfillment library docs, samples, and to report issues
 'use strict';
 
+//const { WebhookClient } = require('dialogflow-fulfillment');
+//const { Card, Suggestion } = require('dialogflow-fulfillment');
+const {dialogflow} = require('actions-on-google');
 const functions = require('firebase-functions');
-const { WebhookClient } = require('dialogflow-fulfillment');
-const { Card, Suggestion } = require('dialogflow-fulfillment');
 
+const app = dialogflow({debug: true});
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 const ANSWER_COUNT = 4; // The number of possible answers per trivia question.
 const GAME_LENGTH = 5;  // The number of questions per trivia game.
@@ -87,29 +89,60 @@ const guru_likes = "You can ask him about things he likes. You can for example a
 //=========================================================================================================================================
 
 const initialhandlers = {
-  'LaunchRequest': function () {
-    this.emit('LaunchGuruIntent');
-  },
-  'LaunchGuruIntent': function () {
-    const speechOutput = guru_launch;
-    this.emit(':responseReady', speechOutput);
-  },
-  'WorkIntent': function () {
-    const speechOutput = guru_work;
-    this.emit(':responseReady', speechOutput);
-  },
-  'RealNameIntent': function () {
-    const speechOutput = guru_fullName;
-    this.emit(':responseReady', speechOutput);
-  }
+     'Default Welcome Intent': function (conv) {
+        this.emit('LaunchGuruIntent', conv);
+    },
+    'LaunchGuruIntent': function (conv) {
+        const speechOutput = guru_launch;
+        const repromptSpeech = guru_launch_reprompt;
+        conv.ask(speechOutput);
+        return;
+    },
+    'WorkIntent': function (conv) {
+        const speechOutput = guru_work;
+        conv.close(speechOutput);
+        return;
+    },
+    'RealNameIntent': function (conv) {
+        const speechOutput = guru_fullName;
+        conv.close(speechOutput);
+        return;
+    }
 
 }
-
+/*
 exports.aboutGuru = functions.https.onRequest((req, res) => {
   const handler = new Handler(initialhandlers);
   handler.run(req, res);
+});*/
+//Instead of having individual handlers for each intent, you can alternatively add a fallback function. 
+//Inside the fallback function, check which intent triggered it and do the appropriate thing accordingly.
+app.fallback((conv) => {
+    console.log(conv);
+     const handler = new Handler(initialhandlers);
+     handler.run(conv);
 });
 
+exports.aboutGuru = functions.https.onRequest(app);
+
+// Define new Handler class to reuse previously defined handlers for alexa with simple modification
+class Handler {
+  constructor(handlers) {
+    this.handlers = handlers;
+  }
+  emit(event, data) {
+      console.log('data '+data);
+      console.log('event '+event);
+      this.handlers[event].call(this, data);
+    
+  }
+  run(req) {
+    console.log(req.body);
+    this.emit(req.body.queryResult.action,req);
+  }
+}
+
+/*
 // Define new Handler class to reuse previously defined handlers
 class Handler {
   constructor(handlers) {
@@ -134,3 +167,4 @@ class Handler {
     this.emit(req.body.queryResult.action);
   }
 }
+*/
