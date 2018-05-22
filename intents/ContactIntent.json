@@ -1,0 +1,111 @@
+{
+  "id": "fff6c524-72f0-437c-b1d0-8c29277599f8",
+  "name": "ContactIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "ContactIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1526959773,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "56077930-83bd-4eba-b0e3-0ff71b5b0142",
+      "data": [
+        {
+          "text": "contact guru"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526959773,
+      "isAuto": false
+    },
+    {
+      "id": "17a9faca-90b5-424c-89af-f8096778b13e",
+      "data": [
+        {
+          "text": "to contact him"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526959773,
+      "isAuto": false
+    },
+    {
+      "id": "82d452bf-a054-44dd-81a3-c06b0dd9b2da",
+      "data": [
+        {
+          "text": "resume"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526959773,
+      "isAuto": false
+    },
+    {
+      "id": "16845696-11ba-4ebf-91f2-c2a6ceac6ee5",
+      "data": [
+        {
+          "text": "phone number"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526959773,
+      "isAuto": false
+    },
+    {
+      "id": "b1350895-43c2-4430-8c0a-7c79f3e2c699",
+      "data": [
+        {
+          "text": "contact"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526959773,
+      "isAuto": false
+    },
+    {
+      "id": "8d438249-0162-47d7-af9f-b786c7d5b4ff",
+      "data": [
+        {
+          "text": "email address"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526959773,
+      "isAuto": false
+    },
+    {
+      "id": "f59a4333-760d-4c9a-8772-eb7fb5b15796",
+      "data": [
+        {
+          "text": "How can I contact him"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526959773,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}
