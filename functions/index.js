@@ -4,10 +4,10 @@
 
 //const { WebhookClient } = require('dialogflow-fulfillment');
 //const { Card, Suggestion } = require('dialogflow-fulfillment');
-const {dialogflow} = require('actions-on-google');
+const { dialogflow } = require('actions-on-google');
 const functions = require('firebase-functions');
 
-const app = dialogflow({debug: true});
+const app = dialogflow({ debug: true });
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 const ANSWER_COUNT = 4; // The number of possible answers per trivia question.
 const GAME_LENGTH = 5;  // The number of questions per trivia game.
@@ -35,7 +35,7 @@ let repeatFlag = false;
 //Speech output constants about guru
 //=========================================================================================================================================
 
-const guru_work = "Guru works as an Full Stack Developer at Nationwide. Say work experience to know more about guru's work history.";
+const guru_work = "Guru works as a Full Stack Developer at Nationwide. Say work experience to know more about guru's work history.";
 const guru_fullName = "His full name is Srisarguru Sridhar. He goes by either guru or batman.";
 const guru_launch = "Welcome to About Guru. This skill is to know about guru. If you don't know him well you can get to know him through this skill. You can ask him about his likes, his technical skills, his work experiences, his projects and you can also play a trivia game How well do you know guru. What do you like to know about him ?.";
 const guru_launch_reprompt = "What do you like to know about him ?";
@@ -89,25 +89,250 @@ const guru_likes = "You can ask him about things he likes. You can for example a
 //=========================================================================================================================================
 
 const initialhandlers = {
-     'Default Welcome Intent': function (conv) {
-        this.emit('LaunchGuruIntent', conv);
-    },
-    'LaunchGuruIntent': function (conv) {
-        const speechOutput = guru_launch;
-        const repromptSpeech = guru_launch_reprompt;
-        conv.ask(speechOutput);
-        return;
-    },
-    'WorkIntent': function (conv) {
-        const speechOutput = guru_work;
-        conv.close(speechOutput);
-        return;
-    },
-    'RealNameIntent': function (conv) {
-        const speechOutput = guru_fullName;
-        conv.close(speechOutput);
-        return;
+  'Default Welcome Intent': function (conv) {
+    this.emit('LaunchGuruIntent', conv);
+  },
+  'LaunchGuruIntent': function (conv) {
+    const speechOutput = guru_launch;
+    const repromptSpeech = guru_launch_reprompt;
+    conv.ask(speechOutput);
+    return;
+  },
+  'WorkIntent': function (conv) {
+    const speechOutput = guru_work;
+    conv.close(speechOutput);
+    return;
+  },
+  'RealNameIntent': function (conv) {
+    const speechOutput = guru_fullName;
+    conv.close(speechOutput);
+    return;
+  },
+  'FavoriteIntent': function (conv) {
+    let favAboutThing = conv.body.queryResult.parameters.FavThings;
+
+    switch (favAboutThing) {
+      case 'colors':
+      case 'color': {
+        this.emit('ColorIntent', conv);
+        break;
+      }
+      case 'cars':
+      case 'car': {
+        this.emit('CarIntent', conv);
+        break;
+      }
+      case 'actor':
+      case 'actors':
+      case 'actress':
+      case 'film actor':
+      case 'movie actor': {
+        this.emit('ActorIntent', conv);
+        break;
+      }
+      case 'movie':
+      case 'movies':
+      case 'picture':
+      case 'film':
+      case 'cinema': {
+        this.emit('MovieIntent', conv);
+        break;
+      }
+      case 'sport':
+      case 'sports': {
+        this.emit('SportsIntent', conv);
+        break;
+      }
+      case 'sportsperson':
+      case 'sportspersons':
+      case 'athletes':
+      case 'athlete': {
+        this.emit('SportspersonIntent', conv);
+        break;
+      }
+      case 'music':
+      case 'music band':
+      case 'band':
+      case 'singer':
+      case 'musician':
+      case 'music artist': {
+        this.emit('MusicIntent', conv);
+        break;
+      }
+      case 'food':
+      case 'food to eat':
+      case 'to eat':
+      case 'dish': {
+        this.emit('FoodIntent', conv);
+        break;
+      }
+      case 'saying':
+      case 'quote':
+      case 'quotes': {
+        this.emit('FavQuoteIntent', conv);
+        break;
+      }
+      case 'superhero':
+      case 'superheroes':
+      case 'comic superhero':
+      case 'comic character':
+      case 'comic hero': {
+        this.emit('FavSuperheroIntent', conv);
+        break;
+      }
+      case 'place':
+      case 'city':
+      case 'place to visit':
+      case 'land':
+      case 'place to live':
+      case 'place on earth':
+      case 'destination': {
+        this.emit('FavPlaceIntent', conv);
+        break;
+      }
+      case 'leader':
+      case 'inspirational leader':
+      case 'inspirational person':
+      case 'leader look up to':
+      case 'look up to':
+      case 'inspiration': {
+        this.emit('FavLeaderIntent', conv);
+        break;
+      }
+      case 'season': {
+        this.emit('FavSeasonIntent', conv);
+        break;
+      }
+      case 'TV show':
+      case 'TV series':
+      case 'TV series to watch':
+      case 'TV show to watch': {
+        this.emit('FavSeriesIntent', conv);
+        break;
+      }
+      case 'video game':
+      case 'computer game':
+      case 'console game':
+      case 'ps4 game':
+      case 'playstation game': {
+        this.emit('FavVideoGameIntent', conv);
+        break;
+      }
+      case 'cricket team':
+      case 'football team':
+      case 'sports team':
+      case 'NFL team':
+      case 'college football team':
+      case 'IPL team':
+      case 'league team':
+      case 'NHL team':
+      case 'hockey team': {
+        this.emit('FavSportsTeamIntent', conv);
+        break;
+      }
+      case 'song':
+      case 'songs': {
+        this.emit('FavSongIntent', conv);
+        break;
+      }
+      default:
+        if (favThingFlag) {
+          favThingFlag = false;
+          this.emit('FavoriteIntent', conv);
+        } else {
+          this.emit('AMAZON.HelpIntent', conv);
+        }
     }
+  },
+  'ColorIntent': function (conv) {
+    const speechOutput = guru_color + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'ActorIntent': function (conv) {
+    const speechOutput = guru_favActor + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'MovieIntent': function (conv) {
+    const speechOutput = guru_favMovie + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'CarIntent': function (conv) {
+    const speechOutput = guru_favCar + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'SportsIntent': function (conv) {
+    const speechOutput = guru_favSports + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'SportspersonIntent': function (conv) {
+    const speechOutput = guru_favAthlethe + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FoodIntent': function (conv) {
+    const speechOutput = guru_favFood + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'MusicIntent': function (conv) {
+    const speechOutput = guru_favMusicBand + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FavQuoteIntent': function (conv) {
+    const speechOutput = guru_favQuote + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FavSuperheroIntent': function (conv) {
+    const speechOutput = guru_favSuperhero + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FavPlaceIntent': function (conv) {
+    const speechOutput = guru_favPlace + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FavLeaderIntent': function (conv) {
+    const speechOutput = guru_favLeader + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FavSeasonIntent': function (conv) {
+    const speechOutput = guru_favSeason + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FavSeriesIntent': function (conv) {
+    const speechOutput = guru_favTvSeries + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FavVideoGameIntent': function (conv) {
+    const speechOutput = guru_favVideoGame + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FavSportsTeamIntent': function (conv) {
+    const speechOutput = guru_favTeam + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'FavSongIntent': function (conv) {
+    const speechOutput = guru_favSongs + REPEAT_REPROMPT;
+    conv.ask(speechOutput);
+    return;
+  },
+  'AMAZON.HelpIntent': function () {
+    const speechOutput = HELP_MESSAGE;
+    conv.ask(speechOutput);
+  }
 
 }
 /*
@@ -118,9 +343,9 @@ exports.aboutGuru = functions.https.onRequest((req, res) => {
 //Instead of having individual handlers for each intent, you can alternatively add a fallback function. 
 //Inside the fallback function, check which intent triggered it and do the appropriate thing accordingly.
 app.fallback((conv) => {
-    console.log(conv);
-     const handler = new Handler(initialhandlers);
-     handler.run(conv);
+  console.log(conv);
+  const handler = new Handler(initialhandlers);
+  handler.run(conv);
 });
 
 exports.aboutGuru = functions.https.onRequest(app);
@@ -131,14 +356,14 @@ class Handler {
     this.handlers = handlers;
   }
   emit(event, data) {
-      console.log('data '+data);
-      console.log('event '+event);
-      this.handlers[event].call(this, data);
-    
+    console.log('data ' + data);
+    console.log('event ' + event);
+    this.handlers[event].call(this, data);
+
   }
   run(req) {
     console.log(req.body);
-    this.emit(req.body.queryResult.action,req);
+    this.emit(req.body.queryResult.action, req);
   }
 }
 
