@@ -46,7 +46,7 @@ const guru_favActor = "His favourite actors are Hugh Jackman, Rajnikanth and Emm
 const guru_relationship = "He is single and No!, we are not in a relationship.";
 const guru_favMovie = "He likes mystery, sci-fi and drama. His all time favourite movie is The Prestige directed by Christopher Nolan.";
 const guru_nationality = "He is Indian. But he resides now in the US.";
-const guru_contact = "You can ask him more by sending an email to him. I have sent his email address to your device.";
+const guru_contact = "You can ask him more by sending an email to him. His email address is s.srisarguru@gmail.com";
 const guru_favAthlethe = "His most favourite is M.S. Dhoni.";
 const guru_favSports = "He likes to watch Cricket, American Football and Hockey.";
 const guru_favTeam = "His favourite club cricket team is Chennai Super Kings, his favorite college football team is Boise State Broncos, his favorite NHL team is Columbus Blue Jackets and his favorite NFL team is Dallas Cowboys.";
@@ -329,7 +329,11 @@ const initialhandlers = {
     conv.ask(speechOutput);
     return;
   },
-  'AMAZON.HelpIntent': function () {
+  'ContactIntent': function (conv) {
+    const speechOutput = guru_contact;
+    conv.close(speechOutput);
+  },
+  'AMAZON.HelpIntent': function (conv) {
     const speechOutput = HELP_MESSAGE;
     conv.ask(speechOutput);
   }
