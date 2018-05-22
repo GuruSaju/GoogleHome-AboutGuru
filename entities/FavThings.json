@@ -1,0 +1,177 @@
+{
+  "id": "ad96f1d6-14c8-4841-974b-aecdbb8cdfca",
+  "name": "FavThings",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "car",
+      "synonyms": [
+        "car",
+        "vehicle",
+        "cars",
+        "sportscar"
+      ]
+    },
+    {
+      "value": "movie",
+      "synonyms": [
+        "movie",
+        "movies",
+        "film",
+        "cinema",
+        "picture",
+        "pictures",
+        "films"
+      ]
+    },
+    {
+      "value": "actor",
+      "synonyms": [
+        "actor",
+        "actors",
+        "movie stars",
+        "actress",
+        "movie actor",
+        "movie star",
+        "movie actors",
+        "actresses",
+        "hero",
+        "heroine"
+      ]
+    },
+    {
+      "value": "place",
+      "synonyms": [
+        "place",
+        "place to visit",
+        "city",
+        "land",
+        "place to live",
+        "place on earth",
+        "destination"
+      ]
+    },
+    {
+      "value": "food",
+      "synonyms": [
+        "food",
+        "eat",
+        "food to eat",
+        "to eat"
+      ]
+    },
+    {
+      "value": "color",
+      "synonyms": [
+        "color",
+        "colors"
+      ]
+    },
+    {
+      "value": "sport",
+      "synonyms": [
+        "sport",
+        "sports"
+      ]
+    },
+    {
+      "value": "sportsperson",
+      "synonyms": [
+        "sportsperson",
+        "sportspersons",
+        "athletes",
+        "athlete"
+      ]
+    },
+    {
+      "value": "music",
+      "synonyms": [
+        "music",
+        "music band",
+        "band",
+        "singer",
+        "musician",
+        "music artist"
+      ]
+    },
+    {
+      "value": "saying",
+      "synonyms": [
+        "saying",
+        "quote",
+        "quotes"
+      ]
+    },
+    {
+      "value": "superhero",
+      "synonyms": [
+        "superhero",
+        "superheroes",
+        "comic superhero",
+        "comic character",
+        "comic superhero",
+        "comic hero"
+      ]
+    },
+    {
+      "value": "leader",
+      "synonyms": [
+        "leader",
+        "inspirational leader",
+        "inspirational person",
+        "leader look up to",
+        "look up to",
+        "inspiration"
+      ]
+    },
+    {
+      "value": "season",
+      "synonyms": [
+        "season",
+        "season of the year"
+      ]
+    },
+    {
+      "value": "TV show",
+      "synonyms": [
+        "TV show",
+        "TV series",
+        "TV series to watch",
+        "TV show to watch"
+      ]
+    },
+    {
+      "value": "video game",
+      "synonyms": [
+        "video game",
+        "computer game",
+        "console game",
+        "ps4 game",
+        "playstation game"
+      ]
+    },
+    {
+      "value": "cricket team",
+      "synonyms": [
+        "cricket team",
+        "football team",
+        "sports team",
+        "NFL team",
+        "college football team",
+        "IPL team",
+        "league team",
+        "NHL team",
+        "hockey team"
+      ]
+    },
+    {
+      "value": "song",
+      "synonyms": [
+        "song",
+        "songs"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

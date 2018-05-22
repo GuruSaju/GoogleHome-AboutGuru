@@ -1,0 +1,345 @@
+{
+  "id": "40f664b1-f825-4f0d-9402-bc381c39d16c",
+  "name": "FavoriteIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "FavoriteIntent",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "128e6a3f-bbcb-401f-a774-039be381e048",
+          "required": false,
+          "dataType": "@FavThings",
+          "name": "FavThings",
+          "value": "$FavThings",
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1526603792,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "c6aa2843-d006-4fb9-b0a8-36f261a32db4",
+      "data": [
+        {
+          "text": "What is his favorite "
+        },
+        {
+          "text": "place",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "f720cfc3-d2d2-4b8c-8bdf-7baeebd6d07c",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "food",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        },
+        {
+          "text": " does he like"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "5bf9c3dc-2cff-4159-bf78-9f4bb5263bb6",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "movies",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        },
+        {
+          "text": " he likes"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "6b0f467b-574c-49f1-820b-69ef2d556af8",
+      "data": [
+        {
+          "text": "movie",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "f9288046-26c7-4220-9a6a-bb149d7cbab4",
+      "data": [
+        {
+          "text": "his favorite "
+        },
+        {
+          "text": "hero",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "5b1debf0-9339-4bf8-b9bc-6097c16c2585",
+      "data": [
+        {
+          "text": "his dream "
+        },
+        {
+          "text": "car",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "9e505cfc-f4d2-45df-b4cf-30da7d836d71",
+      "data": [
+        {
+          "text": "which "
+        },
+        {
+          "text": "car",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        },
+        {
+          "text": " does he like"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "0abaa085-85a2-4a3b-87fd-795c41cbeb2a",
+      "data": [
+        {
+          "text": "which "
+        },
+        {
+          "text": "movie",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        },
+        {
+          "text": " does he like the most"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "fbcd2967-f34d-4e4b-910e-750694ccad57",
+      "data": [
+        {
+          "text": "his most liked "
+        },
+        {
+          "text": "movie",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "042ee7d8-3ef1-4d5a-a0e5-5de38aef845a",
+      "data": [
+        {
+          "text": "which "
+        },
+        {
+          "text": "actor",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        },
+        {
+          "text": " he likes"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "47dca33d-c4e8-44a0-8336-c1a0f43344e1",
+      "data": [
+        {
+          "text": "Who is his favorite "
+        },
+        {
+          "text": "actor",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "d44ff4c9-c84e-4a10-88cf-31152cdd998f",
+      "data": [
+        {
+          "text": "\"What kind of "
+        },
+        {
+          "text": "place",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        },
+        {
+          "text": " does he likes"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "f808ef75-4f05-44ca-95e9-1725405347de",
+      "data": [
+        {
+          "text": "what does he likes to "
+        },
+        {
+          "text": "eat",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        },
+        {
+          "text": " the most"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "04b0d34a-9456-4e9b-93e0-2e85b2c4510d",
+      "data": [
+        {
+          "text": "Which is guru's favorite "
+        },
+        {
+          "text": "movie",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "c80b097a-f47a-4118-83e6-abbca3afb264",
+      "data": [
+        {
+          "text": "What's guru's favorite "
+        },
+        {
+          "text": "car",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    },
+    {
+      "id": "0f844976-2ced-485c-a608-badad5394541",
+      "data": [
+        {
+          "text": "What kind of "
+        },
+        {
+          "text": "movies",
+          "alias": "FavThings",
+          "meta": "@FavThings",
+          "userDefined": true
+        },
+        {
+          "text": " does he like"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526603714,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}
