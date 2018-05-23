@@ -392,6 +392,25 @@ const initialhandlers = {
     }));
     return;
   },
+  'WorkExperienceIntent': function (conv) {
+    /*
+    if (repeatFlag) {
+        this.response.speak(guru_workExpereince);
+    } else {
+        this.response.speak(guru_workExpereince).cardRenderer(guru_work_title, guru_work_content);
+    }
+    this.attributes['previousIntent'] = "WorkExperienceIntent";
+    repeatFlag = false;
+    this.response.shouldEndSession(false);
+    */
+    const speechOutput = guru_workExpereince;
+    conv.ask(speechOutput);
+    conv.ask(new BasicCard({
+      text: guru_work_content,
+      title: guru_work_title,
+    }));
+    return;
+  },
   'AMAZON.HelpIntent': function (conv) {
     const speechOutput = HELP_MESSAGE;
     conv.ask(speechOutput);

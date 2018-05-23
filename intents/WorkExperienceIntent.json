@@ -1,0 +1,133 @@
+{
+  "id": "61243afc-08c1-451c-b4d2-2fd79c976968",
+  "name": "WorkExperienceIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "WorkExperienceIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "75d34707-b8e0-4104-8315-f306e72683bc",
+      "data": [
+        {
+          "text": "about his work experiences"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "6e454b89-5f02-4788-bb38-ccc7f42aa885",
+      "data": [
+        {
+          "text": "previous work"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "ea1114ee-afed-43b9-b906-ab60eafb85a1",
+      "data": [
+        {
+          "text": "his work history"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "19b15717-9727-4798-8ba5-feb3daaa8a61",
+      "data": [
+        {
+          "text": "professional experience"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "ceff54d9-2a03-4325-a627-7a78c1928b47",
+      "data": [
+        {
+          "text": "Which companies did he work for"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "49dca5b1-0473-40ad-8ca2-a975607ec454",
+      "data": [
+        {
+          "text": "his previous experiences"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "7f0f059f-5e20-4ae9-99b4-27d54835048c",
+      "data": [
+        {
+          "text": "What are his work experiences"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "9a2f1048-f113-439b-913b-1644f684017b",
+      "data": [
+        {
+          "text": "work experiences"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "cb32771c-3995-461c-83c4-591b5eef84dc",
+      "data": [
+        {
+          "text": "past employments"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}
