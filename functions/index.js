@@ -249,12 +249,67 @@ const initialhandlers = {
     const speechOutput = guru_contact;
     conv.close(speechOutput);
   },
+  'SummaryIntent': function (conv) {
+    const speechOutput = guru_summary;
+    conv.ask(speechOutput);
+    return;
+  },
+  'RelationshipIntent': function (conv) {
+    const speechOutput = guru_relationship;
+    conv.ask(speechOutput);
+    return;
+  },
+  'NationalityIntent': function (conv) {
+    const speechOutput = guru_nationality;
+    conv.ask(speechOutput);
+    return;
+  },
+  'DegreeIntent': function (conv) {
+    const speechOutput = guru_education;
+    conv.ask(speechOutput);
+    return;
+  },
+  'LanguageIntent': function (conv) {
+    const speechOutput = guru_languages;
+    conv.ask(speechOutput);
+    return;
+  },
+  'CertificationsIntent': function (conv) {
+    const speechOutput = guru_certifications;
+    conv.ask(speechOutput);
+    return;
+  },
+  'PublicationsIntent': function (conv) {
+    const speechOutput = guru_publications;
+    conv.ask(speechOutput);
+    return;
+  },
+  'PassionIntent': function (conv) {
+    const speechOutput = guru_passion;
+    conv.ask(speechOutput);
+    return;
+  },
+  'HobbiesIntent': function (conv) {
+    const speechOutput = guru_hobbies_interests;
+    conv.ask(speechOutput);
+    return;
+  },
+  'ProjectsIntent': function (conv) {
+    const speechOutput = guru_projects;
+    conv.ask(speechOutput);
+    return;
+  },
+  'LikesIntent': function (conv) {
+    const speechOutput = guru_likes;
+    conv.ask(speechOutput);
+    return;
+  },
   'AMAZON.HelpIntent': function (conv) {
     const speechOutput = HELP_MESSAGE;
     conv.ask(speechOutput);
+    return;
   }
-
-}
+};
 /*
 exports.aboutGuru = functions.https.onRequest((req, res) => {
   const handler = new Handler(initialhandlers);
