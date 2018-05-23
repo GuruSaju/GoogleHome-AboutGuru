@@ -4,7 +4,7 @@
 
 //const { WebhookClient } = require('dialogflow-fulfillment');
 //const { Card, Suggestion } = require('dialogflow-fulfillment');
-const { dialogflow } = require('actions-on-google');
+const { dialogflow, BasicCard } = require('actions-on-google');
 const functions = require('firebase-functions');
 
 const app = dialogflow({ debug: true });
@@ -84,6 +84,75 @@ const guru_passion = "He is passionate about natural language processing, machin
 const guru_hobbies_interests = "He is interested in Full Stack Development, natural language processing, machine learning and voice interaction. He likes to learn new technologies and work on projects during his free time. Other than that he helps the programming community by comtributing to Stack Overflow. He also enjoys playing his ps4, running, racketball, watching cricket and football.";
 const guru_likes = "You can ask him about things he likes. You can for example ask What is his favorite car or What movie does he like. What would you like to know?";
 //TODO AGE INTENT FAVORITE FRIEND
+//========================================================================================
+// Card constants
+//========================================================================================
+
+const guru_email = "s.srisarguru@gmail.com";
+const guru_contactCardTitle = "Guru's Email Id";
+const guru_techskills_card_title = "Guru's Technical Skills";
+const guru_techskills_card_content = "1. Programming Proficiency: \n " +
+  "Java, C, C++, Android Java, SQL.\n\n" +
+  "2. Java/J2EE Frameworks: \n" +
+  "Core Java, Servlets, Spring, Struts, Hibernate, JSP, iBatis \n\n" +
+  "3. Language/Scripting: \n" +
+  "JavaScript, Angular JS, Node JS, JQuery, HTML5, CSS, Shell scripting \n\n" +
+  "4. Web Services/Cloud: \n" +
+  "SOAP, Restful, Apigee, AWS Lambda, Firebase \n\n" +
+  "5. Conversational Interfaces: \n" +
+  "Amazon Alexa, Microsoft Bot framework, DialogFlow \n\n" +
+  "6. Servers: \n" +
+  "Apache Tomcat, JBoss, Webshpere. \n\n" +
+  "7. RDBMS: \n" +
+  "Oracle, MySQL and NoSQL. \n\n" +
+  "8. IDE / Tools: \n" +
+  "Eclipse, RAD, Spring STS, Net Beans and TOAD. \n\n" +
+  "9. Build & Project Tracking Tools: \n" +
+  "Jenkins, Maven, Ant, Bugzilla, Redmine, HP Quality Center, UCD. \n\n" +
+  "10. Operating Systems: \n" +
+  "Unix/Linux, Mac OS X, Windows. \n\n" +
+  "11. Version Control: \n" +
+  "Git, Fossil, SVN. \n\n" +
+  "12. Others: \n" +
+  "Amazon Alexa, Microsoft Bot Framework, Matlab, Cyber-Security, Latex, Python, PHP, Bootstrap";
+const guru_work_title = "Guru's Work Experience";
+const guru_work_content = "Nationwide Insurance, Columbus OH, Full Stack Developer (Java/J2EE) from August 2017 – Present \n\n" +
+  "Columbus International Corporation,Columbus OH, Software Engineer (Java/J2EE) from April 2017 – August 2017 \n\n" +
+  "CS Department at Boise State University, Researcher and Developer (RA) from January 2015 – December 2016 \n\n" +
+  "CS Department at Boise State University, Teaching Assistant from January 2015 – December 2016 \n\n" +
+  "Boise State University OIT, HPC Administration from June 2015 – August 2015 \n\n" +
+  "ByteBe® Solutions India Private Limited, Part-time Developer from July 2013 – May 2014 \n\n" +
+  "ABT Info Systems, Java Developer Intern from Dec 2012 – May 2013";
+const guru_work_nationwide_title = "Experience at Nationwide";
+const guru_work_cic_title = "Experience at CIC";
+const guru_work_bsu_title = "Experience at BSU";
+const guru_work_bytebe_title = "Experience at ByteBe";
+const guru_work_abt_title = "Experience at ABT";
+const guru_side_projects_title = "Guru's Other Projects";
+const guru_work_nationwide_content = "PROJECTS: PayPal Payment, Adobe Target for Auto, Property and Powersports, Chatbot for password reset, claims and smartride"
+  + ", Amazon Alexa: Find an agent, FAQ, Claims, Smartride, Billing Inquiry and Bill Pay, Current Carrier, Predictive Coverages, Implementation of plugin framework for Powersports " +
+  "Application and several API’s (internal and external) using APIGEE \n\n"
+  + "ENVIRONMENT: Java/J2EE, Spring (MVC, IOC, AOP, Webflow), JSP, JavaScript, AngularJS, NodeJS, iBatis, Hibernate, jQuery, HTML, CSS, JDBC, Oracle 11g, REST, SOAP, Apigee, WebSphere " +
+  "Application Server, Liberty Server, Maven, HP Quality Center, Amazon Alexa, Microsoft Bot Framework, Git, SVN, Jenkins, UCD";
+
+const guru_work_cic_content = "PROJECT:Online Product Approval (OPA) is a system used to accept, manage, and approve licensed product submissions. The Brand Product Management (BPM) team " +
+  "actively partners with these North America product development teams to review OPA and sample submissions. We had to add new workflow module in addition to the normal workflow to accommodate the BPM team \n" +
+  "ENVIRONMENT: Java/J2EE, Spring (MVC, IOC, AOP), JSP, JavaScript, jQuery, HTML, CSS, JDBC, Stored Proc, MySQL, REST, WebSphere, Maven, Redmine, Git, Log4j.";
+
+const guru_work_bsu_content = "RA PROJECT: A Certificateless One-way Group Key Agreement Protocol for Point-Point Email Encryption (CLOW-GKA) protocol for P2P email encryption using Elliptic curve cryptography \n" +
+  "ENVIRONMENT: Java, Java GUI, Cyber-Security, Spring, JSP, JavaScript, AngularJS, Hibernate, jQuery, HTML, CSS, JDBC, Maven, Git \n"
+  + "TA: 221 Computer Science 2, 321 Data Structures, 421/521 Design and Analysis of Algorithms \n" +
+  "HPC: Assisted researchers in Java and C";
+
+const guru_work_bytebe_content = "PROJECTS: Websites for StoneBe, Kongu Association, WONASA \n" +
+  "ENVIRONMENT: Java, Struts, Servlets, JSP, JDBC, jQuery, MySQL, JavaScript, Apache, HTML, SVN and CSS";
+
+const guru_work_abt_content = "PROJECT: E-Learning Web application where you can take a variety of courses and buy books \n" +
+  "ENVIRONMENT: Java, JavaScript, JSP, Servlets, HTML, MySQL and CSS";
+
+const guru_side_projects_content = "1. Amazon Alexa Skill - aboutGuru using AWS and nodeJS \n 2. Google Assistant Skill - aboutGuru using DialogFlow, Firebase and nodeJS \n 3. Single Page Application Website for Tekcel using Angular and Bootstrap \n 4. My Pet - An android " +
+  "app for pet owners using google maps and android java \n 5. Cloudy with a chance of Express JS - a simple weather app using node js, ejs and expressJS \n 6. Patient Registration and Monitoring System - using PHP and MySql" +
+  "\n 7. Nine Man Morris - nine morris game using java GUI which can be played against an AI \n 8. Data Model of Cricket Leagues - a data model of IPL league using TOAD data modeler";
 //=========================================================================================================================================
 //Handlers
 //=========================================================================================================================================
@@ -304,6 +373,7 @@ const initialhandlers = {
     conv.ask(speechOutput);
     return;
   },
+
   'AMAZON.HelpIntent': function (conv) {
     const speechOutput = HELP_MESSAGE;
     conv.ask(speechOutput);
