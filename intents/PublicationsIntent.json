@@ -1,0 +1,109 @@
+{
+  "id": "c8490f34-2890-47bf-8e80-c9b2716e63e3",
+  "name": "PublicationsIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "PublicationsIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "e0f4df4d-9e6d-45f7-a28c-b43f35116ff0",
+      "data": [
+        {
+          "text": "has he published any papers"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "f5f72bae-2a5d-45b4-a528-f66822b738b6",
+      "data": [
+        {
+          "text": "his research publications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "4aa2ee58-edf6-4a5b-a5f2-0ea62d77488d",
+      "data": [
+        {
+          "text": "about his publications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "572885c1-0b75-4a41-b44e-d69d3f91c437",
+      "data": [
+        {
+          "text": "what are his publications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "19d1cfbc-ab3c-4d8a-a095-7ebaa0fd443a",
+      "data": [
+        {
+          "text": "publications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "85761f0d-c17a-49a6-b93c-147497f73a9a",
+      "data": [
+        {
+          "text": "has he published any research papers"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "46fe54a8-9fb9-41bf-a01d-854a47be09e0",
+      "data": [
+        {
+          "text": "publication"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

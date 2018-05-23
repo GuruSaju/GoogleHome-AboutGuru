@@ -1,0 +1,97 @@
+{
+  "id": "4be7a8a0-c4e2-4406-9f95-1716c31397ef",
+  "name": "ProjectsIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "ProjectsIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "bfb30276-ceab-48c2-b529-14b70888c6f3",
+      "data": [
+        {
+          "text": "What are his projects"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "fff0c395-d2ff-42bc-af9e-a34c8615b4a3",
+      "data": [
+        {
+          "text": "projects"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "5f8c8191-2867-4b72-ab98-925e4902e59f",
+      "data": [
+        {
+          "text": "share his projects"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "5a291d68-1dfd-4878-b853-973eaa4a5b87",
+      "data": [
+        {
+          "text": "What projects did he work on"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "5b13c7af-cf6c-466c-8c7b-306bfd19f0a6",
+      "data": [
+        {
+          "text": "about his projects"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "2d0d74bc-241d-4e8e-bdbb-7fd317d47b27",
+      "data": [
+        {
+          "text": "What are the projects he worked on"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

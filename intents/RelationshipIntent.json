@@ -1,0 +1,154 @@
+{
+  "id": "848dda7d-2554-42f9-b5a3-ce357e9b8fe8",
+  "name": "RelationshipIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "RelationshipIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "He is single and No!, we are not in a relationship"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1526351938,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "67db2299-265d-4f22-a3cf-54b1e4639ced",
+      "data": [
+        {
+          "text": "Who is he dating"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    },
+    {
+      "id": "9d693ce9-9dd3-4b9e-ad95-39479d946b8e",
+      "data": [
+        {
+          "text": "does he have a girlfriend"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    },
+    {
+      "id": "643e12ad-0a06-46be-8d26-cae5077edd4c",
+      "data": [
+        {
+          "text": "is he single"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    },
+    {
+      "id": "98531d31-f9ba-46fe-9640-47b2d0e77699",
+      "data": [
+        {
+          "text": "is he dating anyone"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    },
+    {
+      "id": "1fc24f3c-0809-45c1-b514-936a8d082c5a",
+      "data": [
+        {
+          "text": "Relationship status"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    },
+    {
+      "id": "d513a4ea-b293-4580-801a-589a2c6670d8",
+      "data": [
+        {
+          "text": "is he going out with anyone"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    },
+    {
+      "id": "55d74d1b-8420-418c-8e3b-2bfb756b32b3",
+      "data": [
+        {
+          "text": "married"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    },
+    {
+      "id": "d91c37aa-fc1b-4fa7-9391-a1e5560f90a5",
+      "data": [
+        {
+          "text": "is he married"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    },
+    {
+      "id": "c95d30a0-623a-45a6-8c10-c54484f60fb1",
+      "data": [
+        {
+          "text": "girlfriend"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    },
+    {
+      "id": "2df557a3-768f-46bf-aab3-d1b5a1d77c49",
+      "data": [
+        {
+          "text": "is he in a relationship"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526350212,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

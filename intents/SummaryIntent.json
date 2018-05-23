@@ -1,0 +1,61 @@
+{
+  "id": "dd48d98d-7383-4cb7-9adf-648521ad4ca2",
+  "name": "SummaryIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "SummaryIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "7ba4e1bd-da35-48de-a724-8b8f5e8cd83b",
+      "data": [
+        {
+          "text": "introduction"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "bd5b8296-a608-4c5b-85cb-dc05c51151f1",
+      "data": [
+        {
+          "text": "summary"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "356dec5e-8825-477e-a183-2060e30ca7f6",
+      "data": [
+        {
+          "text": "about himself"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

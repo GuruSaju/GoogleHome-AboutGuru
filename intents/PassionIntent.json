@@ -1,0 +1,121 @@
+{
+  "id": "26a6b111-6830-442b-88ae-00080b2e4033",
+  "name": "PassionIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "PassionIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "5d9565cb-6344-4698-8867-884a832e94da",
+      "data": [
+        {
+          "text": "what is he passionate about"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "87dd813e-0126-4687-b22d-256c0f5131f8",
+      "data": [
+        {
+          "text": "What is his passion"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "858df8bb-6561-4556-8862-a984f39d3a6a",
+      "data": [
+        {
+          "text": "future goals"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "db45813e-58c8-4fd8-a9d3-c38a8cf274dc",
+      "data": [
+        {
+          "text": "What is he most passionate about"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "60edc60c-2287-451a-b8e2-b7296bffe88b",
+      "data": [
+        {
+          "text": "What does he want to do in the future"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "2be89635-1e23-40a8-8df2-464306a32243",
+      "data": [
+        {
+          "text": "about his passion"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "8e12c802-1cf6-49ad-86be-102917615b44",
+      "data": [
+        {
+          "text": "things he is passionate about"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "dbcb7691-58c4-45f7-a182-0bd8c186e550",
+      "data": [
+        {
+          "text": "What does he beleive in"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

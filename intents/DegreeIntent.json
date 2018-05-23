@@ -1,0 +1,207 @@
+{
+  "id": "ef0acb65-10ac-477c-aaef-9dcdbb4ee950",
+  "name": "DegreeIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DegreeIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1527019692,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "af9c53c0-f116-4b66-b80d-5c247cb80d4d",
+      "data": [
+        {
+          "text": "degree"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527019692,
+      "isAuto": false
+    },
+    {
+      "id": "37a299a4-d3bc-4836-ad43-2078d9d0fedf",
+      "data": [
+        {
+          "text": "school"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "d045f47a-4d24-4282-a9e7-16eff2fec2f2",
+      "data": [
+        {
+          "text": "which college did he go to"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "e73282da-a006-40c7-bc10-a0bb9864a1f0",
+      "data": [
+        {
+          "text": "level of qualification"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "921839e7-3ff8-4b58-85dd-2ca5aaa8da05",
+      "data": [
+        {
+          "text": "which college did he study"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "14bd2deb-454d-4acc-947f-9c3bcfeb9fda",
+      "data": [
+        {
+          "text": "what school did he go to"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "55a27f43-84d3-42ae-92fa-64509cbf2cf6",
+      "data": [
+        {
+          "text": "which school did he go to"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "f3e7c521-b1a1-46f0-82f3-41487dff9b34",
+      "data": [
+        {
+          "text": "What did he study"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "8ad7f4db-9147-405e-9add-3bc7bff8c8e1",
+      "data": [
+        {
+          "text": "education"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "b8720606-07c9-4e5c-a598-0e92f586fddd",
+      "data": [
+        {
+          "text": "where did he go to college"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "23578e93-83bf-468b-9d2b-1dff1d1f8577",
+      "data": [
+        {
+          "text": "College"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "88aa8ef0-44da-4d8e-ba02-4216e7dfeb81",
+      "data": [
+        {
+          "text": "where did he go to school"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "7353392e-6955-4442-985a-a784de10ab72",
+      "data": [
+        {
+          "text": "level of education"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "0891b338-6ad3-43c2-9ccb-c32c118b6f45",
+      "data": [
+        {
+          "text": "in which school did he study"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    },
+    {
+      "id": "7702cdb4-5df2-46ec-989c-7978ffca4c7a",
+      "data": [
+        {
+          "text": "what colle did he go to"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1526352579,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

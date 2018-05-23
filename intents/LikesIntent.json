@@ -1,0 +1,120 @@
+{
+  "id": "f4f029f7-aa11-4eda-bc8e-3ea4695d23dc",
+  "name": "LikesIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "LikesIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1527022208,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "c5f9d545-e503-4ea6-8664-38bd94a25513",
+      "data": [
+        {
+          "text": "likes"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527021923,
+      "isAuto": false
+    },
+    {
+      "id": "2e89e090-b471-48b6-90f7-9381d4830260",
+      "data": [
+        {
+          "text": "What all does he like?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527021923,
+      "isAuto": false
+    },
+    {
+      "id": "3f1bd97b-937d-47e0-8642-a3909f1ca565",
+      "data": [
+        {
+          "text": "to know about guru's likes"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527021923,
+      "isAuto": false
+    },
+    {
+      "id": "b723afea-9737-4b5a-a283-c25eb3429de0",
+      "data": [
+        {
+          "text": "tell me about guru's likes"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527021923,
+      "isAuto": false
+    },
+    {
+      "id": "4612dabc-44dc-4bf2-bb61-5bfc1e5d25c1",
+      "data": [
+        {
+          "text": "What does guru like"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527021923,
+      "isAuto": false
+    },
+    {
+      "id": "a01886a0-e785-4fe6-a298-bc67410af467",
+      "data": [
+        {
+          "text": "guru's likes"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527021923,
+      "isAuto": false
+    },
+    {
+      "id": "a10da3b7-18d8-422a-8d90-60ae765e2c99",
+      "data": [
+        {
+          "text": "what are his likes"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527021923,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

@@ -1,0 +1,73 @@
+{
+  "id": "ac8e8323-67b1-4e03-a026-8fe215c4ce8a",
+  "name": "NationalityIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "NationalityIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "3447665c-4088-43cd-8d3f-ce283baafed5",
+      "data": [
+        {
+          "text": "nationality"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "9007411b-7e89-49c6-bc87-3e467eec29f4",
+      "data": [
+        {
+          "text": "Where is he from"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "40ee1389-ce8e-4ae0-a3b0-b59a4757a2c2",
+      "data": [
+        {
+          "text": "Where was he born"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "7b5ca30e-2273-453b-8d63-65f697b9c565",
+      "data": [
+        {
+          "text": "Which city is he from"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

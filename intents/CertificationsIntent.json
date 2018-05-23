@@ -1,0 +1,99 @@
+{
+  "id": "0348a395-bc78-4d5e-9593-454057e83eee",
+  "name": "CertificationsIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "CertificationsIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1526350109,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "f6a44dd2-f7a7-4c1f-85d2-ded6c9ffe9c2",
+      "data": [
+        {
+          "text": "cerfications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "22a8fa7b-61b7-438f-856e-fa494218c4d4",
+      "data": [
+        {
+          "text": "Does he have any certifications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "cb692967-56c9-4922-9220-c479542c6bda",
+      "data": [
+        {
+          "text": "about his certifications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "64c8bd3c-08ae-4782-9637-79106ce4e3d8",
+      "data": [
+        {
+          "text": "technical cerfications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "04fdae11-c6c4-4868-a33d-f72f09cd77b8",
+      "data": [
+        {
+          "text": "programming certifications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "bf476ea4-8561-4267-922b-06089a18b81d",
+      "data": [
+        {
+          "text": "What are his professional certifications"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

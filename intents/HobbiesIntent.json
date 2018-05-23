@@ -1,0 +1,145 @@
+{
+  "id": "a3b489af-5df5-4251-97fd-8eaa281be8c9",
+  "name": "HobbiesIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "HobbiesIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "5fcfc68b-b6f8-48cf-be94-4dc87196452d",
+      "data": [
+        {
+          "text": "What are his hobbies"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "29a5b0a8-3f17-4f90-b4ae-3d63207d5844",
+      "data": [
+        {
+          "text": "What does he do in his free time"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "67d8ae3f-8784-4935-bd22-c0c0af33196c",
+      "data": [
+        {
+          "text": "What fields is he interested in"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "067e010e-ca7b-4320-83f0-616a5fab98b9",
+      "data": [
+        {
+          "text": "hobbies"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "95a2f3ae-d4ed-4fbd-a4fd-013af7039688",
+      "data": [
+        {
+          "text": "interests"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "136d417b-c27e-4086-b196-5a66cc707177",
+      "data": [
+        {
+          "text": "What technologies is he interested in"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "a9552d9a-d210-49d9-8089-2592930f9bba",
+      "data": [
+        {
+          "text": "What is he interested in"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "7c3cc3c5-1d72-48c2-8863-967522b8674b",
+      "data": [
+        {
+          "text": "about his hobbies"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "69a72929-2c85-435b-90ff-5be7f99c849d",
+      "data": [
+        {
+          "text": "What are his interests"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "96843ce7-4900-48ac-8d8e-cc7036f48776",
+      "data": [
+        {
+          "text": "about his interests"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}
