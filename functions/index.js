@@ -109,16 +109,16 @@ const initialhandlers = {
   },
   'FavoriteIntent': function (conv) {
     let favAboutThing = conv.body.queryResult.parameters.FavThings;
-
+    let speechOut = null;
     switch (favAboutThing) {
       case 'colors':
       case 'color': {
-        this.emit('ColorIntent', conv);
+        speechOut = guru_color + REPEAT_REPROMPT;
         break;
       }
       case 'cars':
       case 'car': {
-        this.emit('CarIntent', conv);
+        speechOut = guru_favCar + REPEAT_REPROMPT;
         break;
       }
       case 'actor':
@@ -126,7 +126,7 @@ const initialhandlers = {
       case 'actress':
       case 'film actor':
       case 'movie actor': {
-        this.emit('ActorIntent', conv);
+        speechOut = guru_favActor + REPEAT_REPROMPT;
         break;
       }
       case 'movie':
@@ -134,19 +134,19 @@ const initialhandlers = {
       case 'picture':
       case 'film':
       case 'cinema': {
-        this.emit('MovieIntent', conv);
+        speechOut = guru_favMovie + REPEAT_REPROMPT;
         break;
       }
       case 'sport':
       case 'sports': {
-        this.emit('SportsIntent', conv);
+        speechOut = guru_favSports + REPEAT_REPROMPT;
         break;
       }
       case 'sportsperson':
       case 'sportspersons':
       case 'athletes':
       case 'athlete': {
-        this.emit('SportspersonIntent', conv);
+        speechOut = guru_favAthlethe + REPEAT_REPROMPT;
         break;
       }
       case 'music':
@@ -155,20 +155,20 @@ const initialhandlers = {
       case 'singer':
       case 'musician':
       case 'music artist': {
-        this.emit('MusicIntent', conv);
+        speechOut = guru_favMusicBand + REPEAT_REPROMPT;
         break;
       }
       case 'food':
       case 'food to eat':
       case 'to eat':
       case 'dish': {
-        this.emit('FoodIntent', conv);
+        speechOut = guru_favFood + REPEAT_REPROMPT;
         break;
       }
       case 'saying':
       case 'quote':
       case 'quotes': {
-        this.emit('FavQuoteIntent', conv);
+        speechOut = guru_favQuote + REPEAT_REPROMPT;
         break;
       }
       case 'superhero':
@@ -176,7 +176,7 @@ const initialhandlers = {
       case 'comic superhero':
       case 'comic character':
       case 'comic hero': {
-        this.emit('FavSuperheroIntent', conv);
+        speechOut = guru_favSuperhero + REPEAT_REPROMPT;
         break;
       }
       case 'place':
@@ -186,7 +186,7 @@ const initialhandlers = {
       case 'place to live':
       case 'place on earth':
       case 'destination': {
-        this.emit('FavPlaceIntent', conv);
+        speechOut = guru_favPlace + REPEAT_REPROMPT;
         break;
       }
       case 'leader':
@@ -195,18 +195,18 @@ const initialhandlers = {
       case 'leader look up to':
       case 'look up to':
       case 'inspiration': {
-        this.emit('FavLeaderIntent', conv);
+        speechOut = guru_favLeader + REPEAT_REPROMPT;
         break;
       }
       case 'season': {
-        this.emit('FavSeasonIntent', conv);
+        speechOut = guru_favSeason + REPEAT_REPROMPT;
         break;
       }
       case 'TV show':
       case 'TV series':
       case 'TV series to watch':
       case 'TV show to watch': {
-        this.emit('FavSeriesIntent', conv);
+        speechOut = guru_favTvSeries + REPEAT_REPROMPT;
         break;
       }
       case 'video game':
@@ -214,7 +214,7 @@ const initialhandlers = {
       case 'console game':
       case 'ps4 game':
       case 'playstation game': {
-        this.emit('FavVideoGameIntent', conv);
+        speechOut = guru_favVideoGame + REPEAT_REPROMPT;
         break;
       }
       case 'cricket team':
@@ -226,12 +226,12 @@ const initialhandlers = {
       case 'league team':
       case 'NHL team':
       case 'hockey team': {
-        this.emit('FavSportsTeamIntent', conv);
+        speechOut = guru_favTeam + REPEAT_REPROMPT;
         break;
       }
       case 'song':
       case 'songs': {
-        this.emit('FavSongIntent', conv);
+        speechOut = guru_favSongs + REPEAT_REPROMPT;
         break;
       }
       default:
@@ -242,90 +242,7 @@ const initialhandlers = {
           this.emit('AMAZON.HelpIntent', conv);
         }
     }
-  },
-  'ColorIntent': function (conv) {
-    const speechOutput = guru_color + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'ActorIntent': function (conv) {
-    const speechOutput = guru_favActor + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'MovieIntent': function (conv) {
-    const speechOutput = guru_favMovie + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'CarIntent': function (conv) {
-    const speechOutput = guru_favCar + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'SportsIntent': function (conv) {
-    const speechOutput = guru_favSports + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'SportspersonIntent': function (conv) {
-    const speechOutput = guru_favAthlethe + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FoodIntent': function (conv) {
-    const speechOutput = guru_favFood + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'MusicIntent': function (conv) {
-    const speechOutput = guru_favMusicBand + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FavQuoteIntent': function (conv) {
-    const speechOutput = guru_favQuote + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FavSuperheroIntent': function (conv) {
-    const speechOutput = guru_favSuperhero + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FavPlaceIntent': function (conv) {
-    const speechOutput = guru_favPlace + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FavLeaderIntent': function (conv) {
-    const speechOutput = guru_favLeader + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FavSeasonIntent': function (conv) {
-    const speechOutput = guru_favSeason + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FavSeriesIntent': function (conv) {
-    const speechOutput = guru_favTvSeries + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FavVideoGameIntent': function (conv) {
-    const speechOutput = guru_favVideoGame + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FavSportsTeamIntent': function (conv) {
-    const speechOutput = guru_favTeam + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
-    return;
-  },
-  'FavSongIntent': function (conv) {
-    const speechOutput = guru_favSongs + REPEAT_REPROMPT;
-    conv.ask(speechOutput);
+    conv.ask(speechOut);
     return;
   },
   'ContactIntent': function (conv) {
