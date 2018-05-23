@@ -34,7 +34,7 @@ let repeatFlag = false;
 //=========================================================================================================================================
 //Speech output constants about guru
 //=========================================================================================================================================
-
+const guru_start = "Hi this is Guru. What would you like to know about me? Say help for more info";
 const guru_work = "Guru works as a Full Stack Developer at Nationwide. Say work experience to know more about guru's work history.";
 const guru_fullName = "His full name is Srisarguru Sridhar. He goes by either guru or batman.";
 const guru_launch = "Welcome to About Guru. This skill is to know about guru. If you don't know him well you can get to know him through this skill. You can ask him about his likes, his technical skills, his work experiences, his projects and you can also play a trivia game How well do you know guru. What do you like to know about him ?.";
@@ -93,8 +93,7 @@ const initialhandlers = {
     this.emit('LaunchGuruIntent', conv);
   },
   'LaunchGuruIntent': function (conv) {
-    const speechOutput = guru_launch;
-    const repromptSpeech = guru_launch_reprompt;
+    const speechOutput = guru_start;
     conv.ask(speechOutput);
     return;
   },
