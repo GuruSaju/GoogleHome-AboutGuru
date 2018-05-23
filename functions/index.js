@@ -373,7 +373,25 @@ const initialhandlers = {
     conv.ask(speechOutput);
     return;
   },
-
+  'TechnicalSkillsIntent': function (conv) {
+    /* if (repeatFlag) {
+         this.response.speak(guru_techskills);
+     } else {
+         this.response.speak(guru_techskills).cardRenderer(guru_techskills_card_title, guru_techskills_card_content);
+     }
+     
+     this.response.shouldEndSession(false);
+     repeatFlag = false;
+     this.attributes['previousIntent'] = "TechnicalSkillsIntent";
+     */
+    const speechOutput = guru_techskills;
+    conv.ask(speechOutput);
+    conv.ask(new BasicCard({
+      text: guru_techskills_card_content,
+      title: guru_techskills_card_title,
+    }));
+    return;
+  },
   'AMAZON.HelpIntent': function (conv) {
     const speechOutput = HELP_MESSAGE;
     conv.ask(speechOutput);
