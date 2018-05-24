@@ -1,0 +1,99 @@
+{
+  "id": "4c47f39f-450b-4de0-8086-734f65531efa",
+  "name": "OtherProjectsIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "OtherProjectsIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1527128371,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "2e3c0944-e48a-4691-a829-1625da112ccb",
+      "data": [
+        {
+          "text": "own projects"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "679c12f9-0d80-4ba8-be54-62c8239bbee4",
+      "data": [
+        {
+          "text": "personal projects"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "65dd1bae-9f74-402e-9418-dbdcc3e9b1ae",
+      "data": [
+        {
+          "text": "projects he worked on during his free time"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "980eeb78-94e0-4f9b-9762-183c2bf16e53",
+      "data": [
+        {
+          "text": "What projects has he worked on his own"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "440aeea0-7e1e-4349-bf0e-8b1e966df005",
+      "data": [
+        {
+          "text": "side projects"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "3e687d22-16e4-46ce-83c4-eeef55845435",
+      "data": [
+        {
+          "text": "other projects"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

@@ -1,0 +1,180 @@
+{
+  "id": "9a07d4dc-a29c-41e7-b5ed-011f090c29a3",
+  "name": "WorkDetailIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "WorkDetailIntent",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "550be73c-cc07-44ca-b936-5e8d2de7db88",
+          "required": true,
+          "dataType": "@companyType",
+          "name": "companyType",
+          "value": "$companyType",
+          "prompts": [
+            "Please say the company name."
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1527128819,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "449b7dd1-4655-4233-822b-cf1bfeb5c43c",
+      "data": [
+        {
+          "text": "about his experience at "
+        },
+        {
+          "text": "bytebe",
+          "alias": "companyType",
+          "meta": "@companyType",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527128819,
+      "isAuto": false
+    },
+    {
+      "id": "182c133f-cb77-47e1-8cdc-8d57719584fc",
+      "data": [
+        {
+          "text": "what did he do at "
+        },
+        {
+          "text": "nationwide",
+          "alias": "companyType",
+          "meta": "@companyType",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527128819,
+      "isAuto": false
+    },
+    {
+      "id": "a77c487e-344a-47dc-997d-06dd5bc0b84f",
+      "data": [
+        {
+          "text": "abt info systems",
+          "alias": "companyType",
+          "meta": "@companyType",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527128819,
+      "isAuto": false
+    },
+    {
+      "id": "6d1976c1-b799-45ec-a1fa-14e90ea908c8",
+      "data": [
+        {
+          "text": "what projects did he work on at "
+        },
+        {
+          "text": "boise state",
+          "alias": "companyType",
+          "meta": "@companyType",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527128819,
+      "isAuto": false
+    },
+    {
+      "id": "91228d06-5ef2-4b6a-babb-f7e123d36209",
+      "data": [
+        {
+          "text": "which projects did he work on at "
+        },
+        {
+          "text": "boise state university",
+          "alias": "companyType",
+          "meta": "@companyType",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527128819,
+      "isAuto": false
+    },
+    {
+      "id": "6732a4c2-a5c0-460a-8cfb-338330e2dde4",
+      "data": [
+        {
+          "text": "bytebe",
+          "alias": "companyType",
+          "meta": "@companyType",
+          "userDefined": true
+        },
+        {
+          "text": " projects"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527128819,
+      "isAuto": false
+    },
+    {
+      "id": "e710f6de-9f4a-4bb2-ba1d-7e6de7a18ff8",
+      "data": [
+        {
+          "text": "about "
+        },
+        {
+          "text": "columbus international corporation",
+          "alias": "companyType",
+          "meta": "@companyType",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527128819,
+      "isAuto": false
+    },
+    {
+      "id": "ce84aa81-8a23-4e29-8516-3e79920f5b2f",
+      "data": [
+        {
+          "text": "What proejcts did he work on at "
+        },
+        {
+          "text": "nationwide",
+          "alias": "companyType",
+          "meta": "@companyType",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1527128819,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}

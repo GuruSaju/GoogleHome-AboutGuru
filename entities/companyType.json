@@ -1,0 +1,54 @@
+{
+  "id": "51e5f9a5-40f3-4e89-9f69-04f9f1b5b9db",
+  "name": "companyType",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "nationwide",
+      "synonyms": [
+        "nationwide",
+        "nationwide insurance"
+      ]
+    },
+    {
+      "value": "columbus international",
+      "synonyms": [
+        "columbus international",
+        "Columbus international corporation",
+        "Columbus international",
+        "columbus international corporation",
+        "Columbus corporation",
+        "Columbus corp",
+        "cic",
+        "c. i. c",
+        "CIC"
+      ]
+    },
+    {
+      "value": "boise state university",
+      "synonyms": [
+        "boise state university",
+        "bsu",
+        "boise state"
+      ]
+    },
+    {
+      "value": "bytebe",
+      "synonyms": [
+        "bytebe",
+        "byte be",
+        "byte be solutions"
+      ]
+    },
+    {
+      "value": "abt info systems",
+      "synonyms": [
+        "abt info systems",
+        "abt",
+        "about info systems"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}
