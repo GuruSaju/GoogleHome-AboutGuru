@@ -136,23 +136,23 @@ const guru_work_nationwide_content = "PROJECTS: PayPal Payment, Adobe Target for
   "Application Server, Liberty Server, Maven, HP Quality Center, Amazon Alexa, Microsoft Bot Framework, Git, SVN, Jenkins, UCD";
 
 const guru_work_cic_content = "PROJECT:Online Product Approval (OPA) is a system used to accept, manage, and approve licensed product submissions. The Brand Product Management (BPM) team " +
-  "actively partners with these North America product development teams to review OPA and sample submissions. We had to add new workflow module in addition to the normal workflow to accommodate the BPM team \n" +
+  "actively partners with these North America product development teams to review OPA and sample submissions. We had to add new workflow module in addition to the normal workflow to accommodate the BPM team \n\n" +
   "ENVIRONMENT: Java/J2EE, Spring (MVC, IOC, AOP), JSP, JavaScript, jQuery, HTML, CSS, JDBC, Stored Proc, MySQL, REST, WebSphere, Maven, Redmine, Git, Log4j.";
 
-const guru_work_bsu_content = "RA PROJECT: A Certificateless One-way Group Key Agreement Protocol for Point-Point Email Encryption (CLOW-GKA) protocol for P2P email encryption using Elliptic curve cryptography \n" +
-  "ENVIRONMENT: Java, Java GUI, Cyber-Security, Spring, JSP, JavaScript, AngularJS, Hibernate, jQuery, HTML, CSS, JDBC, Maven, Git \n"
-  + "TA: 221 Computer Science 2, 321 Data Structures, 421/521 Design and Analysis of Algorithms \n" +
+const guru_work_bsu_content = "RA PROJECT: A Certificateless One-way Group Key Agreement Protocol for Point-Point Email Encryption (CLOW-GKA) protocol for P2P email encryption using Elliptic curve cryptography \n\n" +
+  "ENVIRONMENT: Java, Java GUI, Cyber-Security, Spring, JSP, JavaScript, AngularJS, Hibernate, jQuery, HTML, CSS, JDBC, Maven, Git \n\n"
+  + "TA: 221 Computer Science 2, 321 Data Structures, 421/521 Design and Analysis of Algorithms \n\n" +
   "HPC: Assisted researchers in Java and C";
 
-const guru_work_bytebe_content = "PROJECTS: Websites for StoneBe, Kongu Association, WONASA \n" +
+const guru_work_bytebe_content = "PROJECTS: Websites for StoneBe, Kongu Association, WONASA \n\n" +
   "ENVIRONMENT: Java, Struts, Servlets, JSP, JDBC, jQuery, MySQL, JavaScript, Apache, HTML, SVN and CSS";
 
-const guru_work_abt_content = "PROJECT: E-Learning Web application where you can take a variety of courses and buy books \n" +
+const guru_work_abt_content = "PROJECT: E-Learning Web application where you can take a variety of courses and buy books \n\n" +
   "ENVIRONMENT: Java, JavaScript, JSP, Servlets, HTML, MySQL and CSS";
 
-const guru_side_projects_content = "1. Amazon Alexa Skill - aboutGuru using AWS and nodeJS \n 2. Google Assistant Skill - aboutGuru using DialogFlow, Firebase and nodeJS \n 3. Single Page Application Website for Tekcel using Angular and Bootstrap \n 4. My Pet - An android " +
-  "app for pet owners using google maps and android java \n 5. Cloudy with a chance of Express JS - a simple weather app using node js, ejs and expressJS \n 6. Patient Registration and Monitoring System - using PHP and MySql" +
-  "\n 7. Nine Man Morris - nine morris game using java GUI which can be played against an AI \n 8. Data Model of Cricket Leagues - a data model of IPL league using TOAD data modeler";
+const guru_side_projects_content = "1. Amazon Alexa Skill - aboutGuru using AWS and nodeJS \n\n 2. Google Assistant Skill - aboutGuru using DialogFlow, Firebase and nodeJS \n\n 3. Single Page Application Website for Tekcel using Angular and Bootstrap \n\n 4. My Pet - An android " +
+  "app for pet owners using google maps and android java \n\n 5. Cloudy with a chance of Express JS - a simple weather app using node js, ejs and expressJS \n\n 6. Patient Registration and Monitoring System - using PHP and MySql" +
+  "\n\n 7. Nine Man Morris - nine morris game using java GUI which can be played against an AI \n\n 8. Data Model of Cricket Leagues - a data model of IPL league using TOAD data modeler";
 //=========================================================================================================================================
 //Handlers
 //=========================================================================================================================================
@@ -408,6 +408,24 @@ const initialhandlers = {
     conv.ask(new BasicCard({
       text: guru_work_content,
       title: guru_work_title,
+    }));
+    return;
+  },
+  'OtherProjectsIntent': function (conv) {
+    /*
+    this.response.speak(guru_sideProjects + CONTACT_REPROMPT).cardRenderer(guru_side_projects_title, guru_side_projects_content);
+    
+    this.response.listen(CONTACT_REPROMPT);
+    this.attributes['previousIntent'] = "OtherProjectsIntent";
+    this.response.shouldEndSession(false);
+    repeatFlag = false;
+    this.emit(':responseReady');
+    */
+    const speechOutput = guru_sideProjects + CONTACT_REPROMPT;
+    conv.ask(speechOutput);
+    conv.ask(new BasicCard({
+      text: guru_side_projects_content,
+      title: guru_side_projects_title,
     }));
     return;
   },
