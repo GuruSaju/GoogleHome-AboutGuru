@@ -429,6 +429,109 @@ const initialhandlers = {
     }));
     return;
   },
+  'WorkDetailIntent': function (conv) {
+    // const intentObj = this.event.request.intent;
+    //let company = null;
+    /*
+    if (workDetailFlag && intentObj.slots) {
+        company = intentObj.slots.companyType.value;
+    } else if (!workDetailFlag) {
+        const slot = intentObj.slots.companyType;
+        let resolution = (slot.resolutions && slot.resolutions.resolutionsPerAuthority && slot.resolutions.resolutionsPerAuthority.length > 0) ? slot.resolutions.resolutionsPerAuthority[0] : null;
+        if (resolution && resolution.status.code == 'ER_SUCCESS_MATCH') {
+            let resolutionValue = resolution.values[0].value;
+            company = resolutionValue.name;
+        }
+    } else {
+        company = this.attributes['company'];
+    }
+    this.attributes['previousIntent'] = "WorkDetailIntent";
+    if (company !== null) {
+        this.attributes['company'] = company;
+    }
+    */
+    let company = conv.body.queryResult.parameters.companyType;
+    let title = null;
+    let bodyTemp_content = null;
+    let speechOutput = null;
+    let card_content = null;
+    switch (company) {
+      case 'nationwide':
+      case 'nationwide insurance': {
+        //  this.response.speak(guru_nationwide).cardRenderer(guru_work_nationwide_title, guru_work_nationwide_content);
+        speechOutput = guru_nationwide;
+        title = guru_work_nationwide_title;
+        bodyTemp_content = guru_work_nationwide_bodyTemp_content;
+        card_content = guru_work_nationwide_content;
+        break;
+      }
+      case 'Columbus international corporation':
+      case 'Columbus international':
+      case 'columbus international corporation':
+      case 'columbus international':
+      case 'Columbus corporation':
+      case 'Columbus corp':
+      case 'cic':
+      case 'c. i. c':
+      case 'CIC': {
+        // this.response.speak(guru_cic).cardRenderer(guru_work_cic_title, guru_work_cic_content);
+        speechOutput = guru_cic;
+        title = guru_work_cic_title;
+        bodyTemp_content = guru_work_cic_bodyTemp_content;
+        card_content = guru_work_cic_content;
+        break;
+      }
+      case 'boise state university':
+      case 'boise state':
+      case 'bsu': {
+        // this.response.speak(guru_bsu).cardRenderer(guru_work_bsu_title, guru_work_bsu_content);
+        speechOutput = guru_bsu;
+        title = guru_work_bsu_title;
+        bodyTemp_content = guru_work_bsu_bodyTemp_content;
+        card_content = guru_work_bsu_content;
+        break;
+      }
+      case 'byte be':
+      case 'bytebe':
+      case 'byte be solutions': {
+        // this.response.speak(guru_bytebe).cardRenderer(guru_work_bytebe_title, guru_work_bytebe_content);
+        speechOutput = guru_bytebe;
+        title = guru_work_bytebe_title;
+        bodyTemp_content = guru_work_bytebe_bodyTemp_content;
+        card_content = guru_work_bytebe_content;
+        break;
+      }
+      case 'abt':
+      case 'abt info systems':
+      case 'about':
+      case 'about info systems': {
+        //this.response.speak(guru_abt).cardRenderer(guru_work_abt_title, guru_work_abt_content);
+        speechOutput = guru_abt;
+        title = guru_work_abt_title;
+        bodyTemp_content = guru_work_abt_bodyTemp_content;
+        card_content = guru_work_abt_content;
+        break;
+      }
+      default:
+        workDetailFlag = false;
+        this.emit('WorkDetailIntent');
+    }
+    /*
+    if (repeatFlag) {
+        this.response.speak(speechOutput + REPEAT_REPROMPT);
+    } else {
+        this.response.speak(speechOutput + REPEAT_REPROMPT).cardRenderer(title, card_content);
+    }
+    */
+    // this.response.listen(LIKE_TO_KNOW);
+    // repeatFlag = false;
+    conv.ask(speechOutput);
+    conv.ask(new BasicCard({
+      text: card_content,
+      title: title,
+    }));
+    return;
+  },
   'AMAZON.HelpIntent': function (conv) {
     const speechOutput = HELP_MESSAGE;
     conv.ask(speechOutput);
