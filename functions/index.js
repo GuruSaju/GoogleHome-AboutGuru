@@ -173,11 +173,19 @@ const initialhandlers = {
   },
   'RealNameIntent': function (conv) {
     const speechOutput = guru_fullName;
-    conv.close(speechOutput);
+    conv.ask(speechOutput);
     return;
   },
   'FavoriteIntent': function (conv) {
-    let favAboutThing = conv.body.queryResult.parameters.FavThings;
+    let favAboutThing = null;
+    if (!repeatFlag) {
+      favAboutThing = conv.body.queryResult.parameters.FavThings;
+    }
+    else {
+      const repeatContext = conv.contexts.get('repeat');
+      const parameters = repeatContext.parameters;
+      favAboutThing = parameters.favThing;
+    }
     let speechOut = null;
     switch (favAboutThing) {
       case 'colors':
@@ -312,6 +320,11 @@ const initialhandlers = {
         }
     }
     conv.ask(speechOut);
+    const parameters = {
+      intent: 'FavoriteIntent', favThing: favAboutThing
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'ContactIntent': function (conv) {
@@ -450,7 +463,16 @@ const initialhandlers = {
         this.attributes['company'] = company;
     }
     */
-    let company = conv.body.queryResult.parameters.companyType;
+    let company = null;
+    if (!repeatFlag) {
+      company = conv.body.queryResult.parameters.companyType;
+    }
+    else {
+      const repeatContext = conv.contexts.get('repeat');
+      const parameters = repeatContext.parameters;
+      company = parameters.companyName;
+    }
+
     let title = null;
     let bodyTemp_content = null;
     let speechOutput = null;
@@ -530,11 +552,27 @@ const initialhandlers = {
       text: card_content,
       title: title,
     }));
+    const parameters = {
+      intent: 'WorkDetailIntent', companyName: company
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'AMAZON.HelpIntent': function (conv) {
     const speechOutput = HELP_MESSAGE;
     conv.ask(speechOutput);
+    return;
+  }
+  ,
+  'AMAZON.RepeatIntent': function (conv) {
+    const repeatContext = conv.contexts.get('repeat');
+    const parameters = repeatContext.parameters;
+    const intent = parameters.intent;
+    favThingFlag = true;
+    workDetailFlag = true;
+    repeatFlag = true;
+    this.emit(intent, conv);
     return;
   }
 };
