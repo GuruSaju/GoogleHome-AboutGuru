@@ -169,11 +169,21 @@ const initialhandlers = {
   'WorkIntent': function (conv) {
     const speechOutput = guru_work;
     conv.close(speechOutput);
+    const parameters = {
+      intent: 'WorkIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'RealNameIntent': function (conv) {
     const speechOutput = guru_fullName;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'RealNameIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'FavoriteIntent': function (conv) {
@@ -330,60 +340,120 @@ const initialhandlers = {
   'ContactIntent': function (conv) {
     const speechOutput = guru_contact;
     conv.close(speechOutput);
+    const parameters = {
+      intent: 'ContactIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
   },
   'SummaryIntent': function (conv) {
     const speechOutput = guru_summary;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'SummaryIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'RelationshipIntent': function (conv) {
     const speechOutput = guru_relationship;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'RelationshipIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'NationalityIntent': function (conv) {
     const speechOutput = guru_nationality;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'NationalityIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'DegreeIntent': function (conv) {
     const speechOutput = guru_education;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'DegreeIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'LanguageIntent': function (conv) {
     const speechOutput = guru_languages;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'LanguageIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'CertificationsIntent': function (conv) {
     const speechOutput = guru_certifications;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'CertificationsIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'PublicationsIntent': function (conv) {
     const speechOutput = guru_publications;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'PublicationsIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'PassionIntent': function (conv) {
     const speechOutput = guru_passion;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'PassionIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'HobbiesIntent': function (conv) {
     const speechOutput = guru_hobbies_interests;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'HobbiesIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'ProjectsIntent': function (conv) {
     const speechOutput = guru_projects;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'ProjectsIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'LikesIntent': function (conv) {
     const speechOutput = guru_likes;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'LikesIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'TechnicalSkillsIntent': function (conv) {
@@ -403,6 +473,11 @@ const initialhandlers = {
       text: guru_techskills_card_content,
       title: guru_techskills_card_title,
     }));
+    const parameters = {
+      intent: 'TechnicalSkillsIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'WorkExperienceIntent': function (conv) {
@@ -422,6 +497,11 @@ const initialhandlers = {
       text: guru_work_content,
       title: guru_work_title,
     }));
+    const parameters = {
+      intent: 'WorkExperienceIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'OtherProjectsIntent': function (conv) {
@@ -440,6 +520,11 @@ const initialhandlers = {
       text: guru_side_projects_content,
       title: guru_side_projects_title,
     }));
+    const parameters = {
+      intent: 'OtherProjectsIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   },
   'WorkDetailIntent': function (conv) {
@@ -562,6 +647,11 @@ const initialhandlers = {
   'AMAZON.HelpIntent': function (conv) {
     const speechOutput = HELP_MESSAGE;
     conv.ask(speechOutput);
+    const parameters = {
+      intent: 'AMAZON.HelpIntent'
+    };
+    conv.contexts.set('repeat', 1, parameters);
+    repeatFlag = false;
     return;
   }
   ,
