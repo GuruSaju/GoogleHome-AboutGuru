@@ -6,7 +6,8 @@
 //const { Card, Suggestion } = require('dialogflow-fulfillment');
 const { dialogflow, BasicCard } = require('actions-on-google');
 const functions = require('firebase-functions');
-
+const questions = require('./questions');
+const trivia = require('./trivia');
 const app = dialogflow({ debug: true });
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 const ANSWER_COUNT = 4; // The number of possible answers per trivia question.
@@ -153,6 +154,42 @@ const guru_work_abt_content = "PROJECT: E-Learning Web application where you can
 const guru_side_projects_content = "1. Amazon Alexa Skill - aboutGuru using AWS and nodeJS \n\n 2. Google Assistant Skill - aboutGuru using DialogFlow, Firebase and nodeJS \n\n 3. Single Page Application Website for Tekcel using Angular and Bootstrap \n\n 4. My Pet - An android " +
   "app for pet owners using google maps and android java \n\n 5. Cloudy with a chance of Express JS - a simple weather app using node js, ejs and expressJS \n\n 6. Patient Registration and Monitoring System - using PHP and MySql" +
   "\n\n 7. Nine Man Morris - nine morris game using java GUI which can be played against an AI \n\n 8. Data Model of Cricket Leagues - a data model of IPL league using TOAD data modeler";
+
+//==========================================================================================
+//FOR GURU TRIVIA
+//===========================================================================================
+const languageString = {
+  "en": {
+    "translation": {
+      "QUESTIONS": questions["QUESTIONS"],
+      "GAME_NAME": "How well do you know Guru",
+      "HELP_MESSAGE": "I will ask you %s multiple choice questions. Respond with the number of the answer. " +
+      "For example, say one, two, three, or four. To start a new game at any time, say, start game. ",
+      "REPEAT_QUESTION_MESSAGE": "To repeat the last question, say, repeat. ",
+      "ASK_MESSAGE_START": "Would you like to start playing?",
+      "HELP_REPROMPT": "To give an answer to a question, respond with the number of the answer. ",
+      "STOP_MESSAGE": "Would you like to keep playing?",
+      "CANCEL_MESSAGE": "Ok, let\'s play again soon.",
+      "NO_MESSAGE": "Ok, we\'ll play another time. Goodbye!",
+      "TRIVIA_UNHANDLED": "Try saying a number between 1 and %s",
+      "HELP_UNHANDLED": "Say yes to continue, or no to end the game.",
+      "START_UNHANDLED": "Say start to start a new game.",
+      "NEW_GAME_MESSAGE": "Welcome to %s. ",
+      "WELCOME_MESSAGE": "I will ask you %s questions, try to get as many right as you can. " +
+      "Just say the number of the answer. Let\'s begin. ",
+      "ANSWER_CORRECT_MESSAGE": "yay. That is correct. ",
+      "ANSWER_WRONG_MESSAGE": "oops! that is wrong. ",
+      "CORRECT_ANSWER_MESSAGE": "The correct answer is %s: %s. ",
+      "ANSWER_IS_MESSAGE": "That answer is ",
+      "TELL_QUESTION_MESSAGE": "Question %s. %s",
+      "GAME_OVER_MESSAGE": "You got %s out of %s questions correct. Awesome job!. Thank you for playing!",
+      "SCORE_IS_MESSAGE": "Your score is %s. ",
+      "MOVE_ON_TO_NEXT_QUESTION": "Bummer, Let's move on to the next question, ",
+      "USE_SKILL_FOR_WRONG_ANSWERS_GAME_OVER_MESSAGE": "You got %s out of %s questions correct. Thank you for playing!. You can use this skill to find out the correct answers",
+    },
+  }
+};
+
 //=========================================================================================================================================
 //Handlers
 //=========================================================================================================================================
@@ -664,8 +701,26 @@ const initialhandlers = {
     repeatFlag = true;
     this.emit(intent, conv);
     return;
-  }
+  },
+  "GuruTriviaIntent": function (conv) {
+    //startGame(conv, true);
+  },
 };
+
+
+
+//=========================================================================================================================================	
+//Guru Trivia Game	
+//=========================================================================================================================================	
+
+function isAnswerSlotValid(conv) {
+  const answerSlotFilled = conv && conv.body && conv.body.queryResult && conv.body.queryResult.parameters.number;
+  const answerSlotIsInt = answerSlotFilled && !isNaN(parseInt(conv.body.queryResult.parameters.number, 10));
+  return answerSlotIsInt
+    && parseInt(conv.body.queryResult.parameters.number, 10) < (ANSWER_COUNT + 1)
+    && parseInt(conv.body.queryResult.parameters.number, 10) > 0;
+}
+
 /*
 exports.aboutGuru = functions.https.onRequest((req, res) => {
   const handler = new Handler(initialhandlers);
