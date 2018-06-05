@@ -703,10 +703,68 @@ const initialhandlers = {
     return;
   },
   "GuruTriviaIntent": function (conv) {
-    //startGame(conv, true);
+    startGame(conv, true);
   },
 };
 
+
+//========================================================================================================================================
+// Handlers for trivia game
+//=========================================================================================================================================
+//Handler to handle the start of the trivia game
+
+function startGame(conv, newGame) {
+  let speechOutput = newGame ? util.format(t.NEW_GAME_MESSAGE, t.GAME_NAME) + util.format(t.WELCOME_MESSAGE, GAME_LENGTH.toString()) : "";
+
+  const translatedQuestions = t.QUESTION;
+  // Select GAME_LENGTH questions for the game
+  const gameQuestions = populateGameQuestions(translatedQuestions);
+
+  // Generate a random index for the correct answer, from 0 to 3
+  const correctAnswerIndex = Math.floor(Math.random() * (ANSWER_COUNT));
+  // Select and shuffle the answers for each question
+  const roundAnswers = populateRoundAnswers(gameQuestions, 0, correctAnswerIndex, translatedQuestions);
+  const currentQuestionIndex = 0;
+  const spokenQuestion = Object.keys(translatedQuestions[gameQuestions[currentQuestionIndex]])[0];
+  // Build reprompt for the question
+  let repromptText = util.format(t.TELL_QUESTION_MESSAGE, "1", spokenQuestion) + "\n";
+
+  for (let i = 0; i < ANSWER_COUNT; i++) {
+    repromptText += `${i + 1}. ${roundAnswers[i]}. ` + "\n";
+  }
+
+  //Build object for session
+  speechOutput += repromptText;
+
+  conv.ask(speechOutput);
+  conv.ask(new BasicCard({
+    text: repromptText,
+    title: t.GAME_NAME
+  }));
+  const parameters = {
+    "speechOutput": repromptText,
+    "repromptText": repromptText,
+    "currentQuestionIndex": currentQuestionIndex,
+    "correctAnswerIndex": correctAnswerIndex + 1,
+    "questions": gameQuestions,
+    "score": 0,
+    "correctAnswerText": translatedQuestions[gameQuestions[currentQuestionIndex]][Object.keys(translatedQuestions[gameQuestions[currentQuestionIndex]])[0]][0],
+    "state": GAME_STATES.TRIVIA,
+  };
+  conv.contexts.set('gurutrivia', 1, parameters);
+  repeatFlag = false;
+  return;
+
+  /*
+          //Handle trivia state. Set the current state to trivia mode. The skill will now use handlers defined in triviaStateHandlers
+          this.handler.state = GAME_STATES.TRIVIA;
+  
+          //build and send the response as listen
+          this.response.speak(speechOutput).listen(repromptText);
+          this.response.cardRenderer(this.t("GAME_NAME"), repromptText);
+          this.emit(":responseReady");
+  */
+}
 
 
 //=========================================================================================================================================	
