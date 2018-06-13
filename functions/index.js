@@ -395,9 +395,6 @@ const QUESTIONS = [
 //==========================================================================================
 //FOR GURU TRIVIA
 //===========================================================================================
-//==========================================================================================
-//FOR GURU TRIVIA
-//===========================================================================================
 const t = {
   QUESTION: QUESTIONS,
   GAME_NAME: "How well do you know Guru",
@@ -1004,6 +1001,68 @@ function startGame(conv, newGame) {
   */
 }
 
+//Handler to handle in trivia mode ie during the game after the start handler
+const triviaStateHandlers = {
+  "AnswerIntent": function (conv) { //if the user answers a question
+    handleUserGuess(conv, false);
+  },
+  "DontKnowIntent": function (conv) { //if user says he doesn't know
+    handleUserGuess(conv, true);
+  },
+  "AMAZON.StartOverIntent": function (conv) {
+    //this.handler.state = GAME_STATES.START;
+    // this.emitWithState("StartGame", false);
+    startGame(conv, false);
+  },
+  "AMAZON.RepeatIntent": function (conv) {
+    //this.response.speak(this.attributes["speechOutput"]).listen(this.attributes["repromptText"]);
+    //this.emit(":responseReady");
+    const gurutriviaContext = conv.contexts.get('gurutrivia');
+    const parameters = gurutriviaContext.parameters;
+    //  const gameQuestions = this.attributes.questions;
+    //  let correctAnswerIndex = parseInt(this.attributes.correctAnswerIndex, 10);
+    //  let currentScore = parseInt(this.attributes.score, 10);
+    //  let currentQuestionIndex = parseInt(this.attributes.currentQuestionIndex, 10);
+    conv.contexts.set('gurutrivia', 1, parameters);
+    conv.ask(parameters.speechOutput);
+    return;
+  },
+  "AMAZON.HelpIntent": function (conv) {
+    // this.handler.state = GAME_STATES.HELP;
+    //  this.emitWithState("helpTheUser", false);
+
+    helpStateHandlers['helpTheUser'].call(this, conv);
+    return;
+  },
+  "AMAZON.StopIntent": function (conv) {
+    //this.handler.state = GAME_STATES.HELP;
+    const speechOutput = t.STOP_MESSAGE;
+    // this.response.speak(speechOutput).listen(speechOutput);
+    // this.emit(":responseReady");
+
+    const gurutriviaContext = conv.contexts.get('gurutrivia');
+    const parameters = gurutriviaContext.parameters;
+    parameters.state = GAME_STATES.HELP;
+    //  const gameQuestions = this.attributes.questions;
+    //  let correctAnswerIndex = parseInt(this.attributes.correctAnswerIndex, 10);
+    //  let currentScore = parseInt(this.attributes.score, 10);
+    //  let currentQuestionIndex = parseInt(this.attributes.currentQuestionIndex, 10);
+    conv.contexts.set('gurutrivia', 1, parameters);
+    conv.ask(speechOutput);
+  },
+  "AMAZON.CancelIntent": function (conv) {
+    //this.response.speak(this.t("CANCEL_MESSAGE"));
+    //this.emit(":responseReady");
+    conv.close(t.CANCEL_MESSAGE);
+  },
+  "input.unknown": function (conv) {
+    const speechOutput = util.format(t.TRIVIA_UNHANDLED, GAME_LENGTH);
+    const gurutriviaContext = conv.contexts.get('gurutrivia');
+    const parameters = gurutriviaContext.parameters;
+    conv.contexts.set('gurutrivia', 1, parameters);
+    conv.ask(speechOutput);
+  },
+};
 
 //=========================================================================================================================================	
 //Guru Trivia Game	
